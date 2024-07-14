@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Default settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    text-align: center;
+}
+
 body {
     background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    font-family: "Libre Caslon Text", serif;
+    color: black;
+    min-height: 100vh;
+    min-width: 100vw;
 }
