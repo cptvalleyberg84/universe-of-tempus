@@ -36,15 +36,30 @@ main {
 }
 
 section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-bottom: 30px;
 }
 
 /* The MAP Section */
 #map-section {
     background-color: aquamarine;
     max-width: 800px;
+}
+
+#map-container {
+    background-color: pink;
+    max-width: 800px;
+}
+
+#map-image {
+    max-width: 100%;
+    border: 2px solid #3a3a3a;
+    border-radius: 10px;
+}
+
+#map-description {
+    margin-top: 10px;
+    padding: 10px 0;
+    background-color: bisque;
 }
 
 /* Footer Styling */
