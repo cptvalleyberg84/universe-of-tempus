@@ -66,6 +66,14 @@ section {
     background-color: bisque;
 }
 
+/* The Floating Dot */
+.floating-dot {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+}
+
 /* Footer Styling */
 footer #social {
     list-style-type: none;
