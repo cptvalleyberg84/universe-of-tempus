@@ -48,6 +48,8 @@ section {
 #map-container {
     background-color: pink;
     max-width: 800px;
+    /* adding position relative - for the floating point to respond better to responsivity */
+    position: relative;
 }
 
 #map-container h3 {
