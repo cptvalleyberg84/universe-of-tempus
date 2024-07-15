@@ -46,6 +46,7 @@ function loadMap() {
     })
 }
 
+// Load the loadMap function after the website will load in the browser
 window.onload = function () {
     loadMap();
 }
