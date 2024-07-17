@@ -39,18 +39,19 @@
             <h2>Quiz</h2>
             <p>Test your knowledge about the novel.</p>
             <div id="quiz-container">
-                <div id="quiz-question-container">
-                    <div id="question-number"></div>
-                    <div id="question"></div>
-                    <div id="answers">
-                        <button class="answer"></button>
-                        <button class="answer"></button>
-                        <button class="answer"></button>
-                        <button class="answer"></button>
+                <div id="question-container" class="hide">
+                    <div id="question">Question</div>
+                    <div id="answer-buttons" class="answer-btn-grid">
+                        <button class="answer btn">Answer</button>
+                        <button class="answer btn">Answer</button>
+                        <button class="answer btn">Answer</button>
+                        <button class="answer btn">Answer</button>
                     </div>
                 </div>
-                <button id="next-question">Next Question</button>
-                <button id="restart-quiz">Restart Quiz</button>
+                <div class="controls">
+                    <button id="start-btn" class="start-btn btn">Start</button>
+                    <button id="next-question" class="next-btn btn hide">Next</button>
+                </div>
             </div>
         </section>
     </main>
