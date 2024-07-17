@@ -43,6 +43,17 @@ function loadMap() {
         // Add the floating dot to the map image
         mapContainer.appendChild(floatingDot)
 
+        floatingDot.addEventListener("click", () => {
+            // document.body.innerHTML = "";
+            mapDescription.innerHTML = `<h3>${location.name}</h3><p>${location.description}</p>`;
+        })
+
+        mapContainer.addEventListener("click", (event) => {
+            if (event.target === mapContainer || event.target === mapImage) {
+                mapDescription.innerHTML = '<p>Click on a location to learn more</p>';
+            }
+        })
+
     })
 }
 

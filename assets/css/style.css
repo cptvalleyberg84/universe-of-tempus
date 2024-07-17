@@ -2,11 +2,12 @@
 
 /* Default settings */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0 0;
+    padding: 0 0;
     box-sizing: border-box;
     line-height: 1.5;
     text-align: center;
+
 }
 
 body {
@@ -15,8 +16,8 @@ body {
     flex-direction: column;
     font-family: "Libre Caslon Text", serif;
     color: black;
-    min-height: 100vh;
-    min-width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
 }
 
 /* Header Styling */
@@ -30,8 +31,7 @@ header {
 /* Main Content area styling */
 main {
     flex: 1 0 auto;
-    text-align: center;
-    padding: 20px;
+    padding: 20px 0;
     margin: auto;
 }
 
@@ -84,7 +84,6 @@ section {
 .floating-dot:hover {
     background-color: white;
     transform: scale(1.2);
-
 }
 
 /* Defining keyframes for the floating dot animation effect */
