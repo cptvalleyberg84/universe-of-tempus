@@ -58,19 +58,44 @@ function loadMap() {
 }
 
 // THE QUIZ SECTION
+
+// Quiz questions data
+const quizQuestions = [{
+        question: "What is the primary setting of The Age of New Era, Part 1: The Origin?",
+        options: ["High School", "Holy Cross Mountains", "Space Station", "Desert"],
+        correctAnswer: 1,
+    },
+    {
+        question: "Who is the main protagonist in the novel?",
+        options: ["Edward Teslenstein", "John Smith", "Jane Doe", "Mysterious Stranger"],
+        correctAnswer: 0,
+        image: "assets/images/map-of-universe.jpeg"
+    },
+    // Add 8-10 more questions here
+];
+
+// Defining Quiz Variables
 const startBtn = document.getElementById('start-btn');
 const questionContainer = document.getElementById('question-container')
-const nextQuestion = document.getElementById('next-question')
+const nextQuestionBtn = document.getElementById('next-question')
 const questionElement = document.getElementById('question')
 const answerBtns = document.getElementById('answer-buttons')
 
 let shuffledQuestions, currentQuestionIndex
 
+// Adding event listeners for the start button and the next question button
 startBtn.addEventListener('click', startQuiz);
+nextQuestionBtn.addEventListener('click', () => {
+    currentQuestionIndex++
+    setNextQuestion()
+})
 
+/**
+ * Start Quiz Function
+ */
 function startQuiz() {
     startBtn.classList.add('hide')
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    shuffledQuestions = quizQuestions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainer.classList.remove('hide')
     setNextQuestion()
@@ -83,20 +108,18 @@ function setNextQuestion() {
 
 function showQuestion(question) {
     questionElement.innerText = question.question
-    question.answers.forEach(answer => {
+    question.options.forEach((option, index) => {
         const button = document.createElement('button')
-        button.innerText = answer.text
+        button.innerText = option
         button.classList.add('btn')
-        if (answer.correct) {
-            button.dataset.correct = answer.correct
-        }
+        button.dataset.correct = index === question.correctAnswer
         button.addEventListener('click', selectAnswer)
         answerBtns.appendChild(button)
     })
 }
 
 function resetQuiz() {
-    nextQuestion.classList.add('hide')
+    nextQuestionBtn.classList.add('hide')
     while (answerBtns.firstChild) {
         answerBtns.removeChild(answerBtns.firstChild)
     }
@@ -109,6 +132,12 @@ function selectAnswer(e) {
     Array.from(answerBtns.children).forEach(button => {
         setCorrectOrWrongClass(button, button.dataset.correct)
     })
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        nextQuestionBtn.classList.remove('hide')
+    } else {
+        startBtn.innerText = 'Restart'
+        startBtn.classList.remove('hide')
+    }
 }
 
 function setCorrectOrWrongClass(answerAttempt, correct) {
@@ -124,20 +153,6 @@ function clearCorrectOrWrongClass(answerAttempt) {
     answerAttempt.classList.remove('correct')
     answerAttempt.classList.remove('wrong')
 }
-
-const questions = [{
-    question: 'What is the name of the main character?',
-    answers: [{
-            text: 'Edward Teslenstein',
-            correct: true
-        },
-        {
-            text: 'Bilbo Baggins',
-            correct: false
-        }
-    ]
-}]
-
 
 // Load the loadMap function after the website will load in the browser
 window.onload = function () {

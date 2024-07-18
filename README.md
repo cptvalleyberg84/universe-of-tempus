@@ -31,3 +31,9 @@
 
 ### Images:
 1. [Tempus Map Image was generated with bing image creator](https://www.bing.com/images/create#)
+
+## The QUIZ Section:
+
+1. [Build A Quiz App With JavaScript](https://www.youtube.com/watch?v=riDzcEQbX6k)
+
+
