@@ -176,6 +176,14 @@ function clearCorrectOrWrongClass(answerAttempt) {
     answerAttempt.classList.remove('wrong')
 }
 
+/**
+ * Programming function to call next question of the quiz
+ */
+function nextQuestion {
+    currentQuestionIndex++
+    loadQuiz()
+}
+
 // Load the loadMap function after the website will load in the browser
 window.onload = function () {
     loadMap();
