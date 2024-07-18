@@ -57,6 +57,52 @@ function loadMap() {
     })
 }
 
+// THE QUIZ SECTION
+const startBtn = document.getElementById('start-btn');
+const questionContainer = document.getElementById('question-container')
+const nextQuestion = document.getElementById('next-question')
+const questionElement = document.getElementById('question')
+const answerBtns = document.getElementById('answer-buttons')
+
+let shuffledQuestions, currentQuestionIndex
+
+startBtn.addEventListener('click', startQuiz);
+
+function startQuiz() {
+    startBtn.classList.add('hide')
+    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    currentQuestionIndex = 0
+    questionContainer.classList.remove('hide')
+    setNextQuestion()
+}
+
+function setNextQuestion() {
+    showQuestion(shuffledQuestions[currentQuestionIndex])
+}
+
+function showQuestion(question) {
+    questionElement.innerText = question.question
+
+}
+
+function selectAnswer() {
+
+}
+
+const questions = [{
+    question: 'What is the name of the main character?',
+    answers: [{
+            text: 'Edward Teslenstein',
+            correct: true
+        },
+        {
+            text: 'Bilbo Baggins',
+            correct: false
+        }
+    ]
+}]
+
+
 // Load the loadMap function after the website will load in the browser
 window.onload = function () {
     loadMap();
