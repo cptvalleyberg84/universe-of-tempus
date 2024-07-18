@@ -161,7 +161,8 @@ section {
 }
 
 .answer-btn-grid {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 9px;
     margin: 18px 0;
 }
@@ -175,6 +176,7 @@ section {
     outline: none;
     font-weight: bold;
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .btn:hover {

@@ -76,12 +76,12 @@ const quizQuestions = [{
 
 // Defining Quiz Variables
 const startBtn = document.getElementById('start-btn');
-const questionContainer = document.getElementById('question-container')
-const nextQuestionBtn = document.getElementById('next-question')
-const questionElement = document.getElementById('question')
-const answerBtns = document.getElementById('answer-buttons')
+const questionContainer = document.getElementById('question-container');
+const nextQuestionBtn = document.getElementById('next-question');
+const questionElement = document.getElementById('question');
+const answerBtns = document.getElementById('answer-buttons');
 
-let shuffledQuestions, currentQuestionIndex
+let shuffledQuestions, currentQuestionIndex;
 let quizStarted = false;
 let userAnswers = [];
 
@@ -94,19 +94,19 @@ nextQuestionBtn.addEventListener('click', nextQuestion);
  */
 function startQuiz() {
     console.log('Start quiz called'); // Add this line
-    startBtn.classList.add('hide')
-    shuffledQuestions = quizQuestions.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0
-    userAnswers = []
-    quizStarted = true
-    questionContainer.classList.remove('hide')
-    loadQuiz()
+    startBtn.classList.add('hide');
+    shuffledQuestions = quizQuestions.sort(() => Math.random() - .5);
+    currentQuestionIndex = 0;
+    userAnswers = [];
+    quizStarted = true;
+    questionContainer.classList.remove('hide');
+    loadQuiz();
 }
 
 function loadQuiz() {
     console.log('Load quiz called'); // Add this line
-    resetQuiz()
-    showQuestion(shuffledQuestions[currentQuestionIndex])
+    resetQuiz();
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 
 function showQuestion(question) {
@@ -117,27 +117,27 @@ function showQuestion(question) {
     questionElement.appendChild(questionText);
 
     if (question.image) {
-        const imageElement = document.createElement('img')
-        imageElement.src = question.image
-        imageElement.classList.add('quiz-image')
-        questionElement.appendChild(imageElement)
+        const imageElement = document.createElement('img');
+        imageElement.src = question.image;
+        imageElement.classList.add('quiz-image');
+        questionElement.appendChild(imageElement);
     }
     question.options.forEach((option, index) => {
-        const button = document.createElement('button')
-        button.innerText = option
-        button.classList.add('btn')
-        button.dataset.correct = index === question.correctAnswer
-        button.addEventListener('click', selectAnswer)
-        answerBtns.appendChild(button)
-    })
+        const button = document.createElement('button');
+        button.innerText = option;
+        button.classList.add('btn');
+        button.dataset.correct = index === question.correctAnswer;
+        button.addEventListener('click', selectAnswer);
+        answerBtns.appendChild(button);
+    });
 }
 
 function resetQuiz() {
-    nextQuestionBtn.classList.add('hide')
+    nextQuestionBtn.classList.add('hide');
     while (answerBtns.firstChild) {
-        answerBtns.removeChild(answerBtns.firstChild)
+        answerBtns.removeChild(answerBtns.firstChild);
         // Clear question and Image
-        questionElement.innerHTML = ''
+        questionElement.innerHTML = '';
     }
 }
 
@@ -145,35 +145,35 @@ function resetQuiz() {
  * Function of selecting correct or wrong answer 
  */
 function selectAnswer(e) {
-    const selectedAnswerBtn = e.target
-    const correct = selectedAnswerBtn.dataset.correct === 'true'
-    setCorrectOrWrongClass(document.body, correct)
+    const selectedAnswerBtn = e.target;
+    const correct = selectedAnswerBtn.dataset.correct === 'true';
+    setCorrectOrWrongClass(document.body, correct);
     Array.from(answerBtns.children).forEach(button => {
-        setCorrectOrWrongClass(button, button.dataset.correct === 'true')
-    })
+        setCorrectOrWrongClass(button, button.dataset.correct === 'true');
+    });
     userAnswers[currentQuestionIndex] = correct;
 
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        nextQuestionBtn.classList.remove('hide')
+        nextQuestionBtn.classList.remove('hide');
     } else {
-        startBtn.innerText = 'Restart'
-        startBtn.classList.remove('hide')
+        startBtn.innerText = 'Restart';
+        startBtn.classList.remove('hide');
         showScore();
     }
 }
 
 function setCorrectOrWrongClass(element, correct) {
-    clearCorrectOrWrongClass(element)
+    clearCorrectOrWrongClass(element);
     if (correct) {
-        element.classList.add('correct')
+        element.classList.add('correct');
     } else {
-        element.classList.add('wrong')
+        element.classList.add('wrong');
     }
 }
 
 function clearCorrectOrWrongClass(element) {
-    element.classList.remove('correct')
-    element.classList.remove('wrong')
+    element.classList.remove('correct');
+    element.classList.remove('wrong');
 }
 
 /**
@@ -181,8 +181,8 @@ function clearCorrectOrWrongClass(element) {
  */
 function nextQuestion() {
     if (currentQuestionIndex < shuffledQuestions.length - 1) {
-        currentQuestionIndex++
-        loadQuiz()
+        currentQuestionIndex++;
+        loadQuiz();
     } else {
         showScore();
     }
@@ -191,24 +191,24 @@ function nextQuestion() {
  * Setting up the scoreboard to show results
  */
 function showScore() {
-    questionContainer.classList.add('hide')
-    const quizContainer = document.getElementById('quiz-container')
-    quizContainer.innerHTML = ""
+    questionContainer.classList.add('hide');
+    const quizContainer = document.getElementById('quiz-container');
+    quizContainer.innerHTML = "";
 
     let correctCount = userAnswers.filter(answer => answer).length;
 
-    const scoreMessage = document.createElement('div')
+    const scoreMessage = document.createElement('div');
     scoreMessage.classList.add('quiz-score');
     scoreMessage.innerHTML = `<h2>Quiz Complete!</h2><p>You got ${correctCount} out of ${shuffledQuestions.length} questions correct.</p>
 <p>${correctCount >= shuffledQuestions.length / 2 ? 'You know a lot! Did you read the novel?' : 'Better luck next time!'}</p>`;
 
     quizContainer.appendChild(scoreMessage);
 
-    const restartButton = document.createElement('button');
-    restartButton.innerText = 'Restart';
-    restartButton.classList.add('btn');
-    restartButton.addEventListener('click', startQuiz);
-    quizContainer.appendChild(restartButton);
+    const restartBtn = document.createElement('button');
+    restartBtn.classList.add('btn');
+    restartBtn.innerText = 'Restart';
+    restartBtn.addEventListener('click', () => location.reload());
+    quizContainer.appendChild(restartBtn);
 }
 
 // Ensure the quiz starts properly when the window loads

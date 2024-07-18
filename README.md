@@ -37,3 +37,13 @@
 1. [Build A Quiz App With JavaScript](https://www.youtube.com/watch?v=riDzcEQbX6k)
 
 
+
+
+
+
+## Bugs section
+had mutliple issues
+in the map section: floating points where all over the place for most part of project building. not responsive - the issue laid with overflow, width control, and relative position in the container of the dots.
+
+in the quiz section: multiple issues with logic, and how it is all done. It's more than one can figure out straight from the box. Putting everything together has been quite difficult, and even thou near the end, I had some issues with buttons being hidden while should not, or not working while they should. It is worth to note that issue sometimes exist outside of javascript and merely one display:none in CSS, may bring lots of confusion. Its important to logically understand that display none can be assigned also to various id's or classes, and it's worth to remember which ones. - otherwise - if a button does not work - it is good to go through the code, again and again until understanding will come. in this case - going from the top and following each variable, checking everywhere it exists for the slightest error may bring a lot of happiness.
+But when you do, and it's not midnight - it can even bring a smile - that this day, was not all for errors, but also for solutions. (18-07-2024)
