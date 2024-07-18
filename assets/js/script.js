@@ -77,15 +77,32 @@ function startQuiz() {
 }
 
 function setNextQuestion() {
+    resetQuiz()
     showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
 function showQuestion(question) {
     questionElement.innerText = question.question
-
+    question.answers.forEach(answer => {
+        const button = document.createElement('button')
+        button.innerText = answer.text
+        button.classList.add('btn')
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener('click', selectAnswer)
+        answerBtns.appendChild(button)
+    })
 }
 
-function selectAnswer() {
+function resetQuiz() {
+    nextQuestion.classList.add('hide')
+    while (answerBtns.firstChild) {
+        answerBtns.removeChild(answerBtns.firstChild)
+    }
+}
+
+function selectAnswer(e) {
 
 }
 
