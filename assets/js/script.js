@@ -82,6 +82,8 @@ const questionElement = document.getElementById('question')
 const answerBtns = document.getElementById('answer-buttons')
 
 let shuffledQuestions, currentQuestionIndex
+let quizStarted = false;
+let userAnswers = [];
 
 // Adding event listeners for the start button and the next question button
 startBtn.addEventListener('click', startQuiz);
@@ -99,6 +101,13 @@ function startQuiz() {
     currentQuestionIndex = 0
     questionContainer.classList.remove('hide')
     setNextQuestion()
+    quizStarted = true
+    loadQuiz()
+}
+
+function loadQuiz() {
+    resetQuiz()
+    showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
 function setNextQuestion() {
@@ -108,6 +117,12 @@ function setNextQuestion() {
 
 function showQuestion(question) {
     questionElement.innerText = question.question
+    if (question.image) {
+        const imageElement = document.createElement('img')
+        imageElement.src = question.image
+        imageElement.classList.add('quiz-image')
+        questionElement.appendChild(imageElement)
+    }
     question.options.forEach((option, index) => {
         const button = document.createElement('button')
         button.innerText = option
@@ -122,16 +137,23 @@ function resetQuiz() {
     nextQuestionBtn.classList.add('hide')
     while (answerBtns.firstChild) {
         answerBtns.removeChild(answerBtns.firstChild)
+        // Clear question and Image
+        questionElement.innerHTML = ''
     }
 }
 
+/**
+ * Function of selecting correct or wrong answer 
+ */
 function selectAnswer(e) {
     const selectedAnswerBtn = e.target
-    const correct = selectedAnswerBtn.dataset.correct
+    const correct = selectedAnswerBtn.dataset.correct === 'true'
     setCorrectOrWrongClass(document.body, correct)
     Array.from(answerBtns.children).forEach(button => {
-        setCorrectOrWrongClass(button, button.dataset.correct)
+        setCorrectOrWrongClass(button, button.dataset.correct === 'true')
     })
+    userAnswers[currentQuestionIndex] = correct ? true : false;
+
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextQuestionBtn.classList.remove('hide')
     } else {
