@@ -87,36 +87,35 @@ let userAnswers = [];
 
 // Adding event listeners for the start button and the next question button
 startBtn.addEventListener('click', startQuiz);
-nextQuestionBtn.addEventListener('click', () => {
-    currentQuestionIndex++
-    setNextQuestion()
-})
+nextQuestionBtn.addEventListener('click', nextQuestion);
 
 /**
  * Start Quiz Function
  */
 function startQuiz() {
+    console.log('Start quiz called'); // Add this line
     startBtn.classList.add('hide')
     shuffledQuestions = quizQuestions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
-    questionContainer.classList.remove('hide')
-    setNextQuestion()
+    userAnswers = []
     quizStarted = true
+    questionContainer.classList.remove('hide')
     loadQuiz()
 }
 
 function loadQuiz() {
-    resetQuiz()
-    showQuestion(shuffledQuestions[currentQuestionIndex])
-}
-
-function setNextQuestion() {
+    console.log('Load quiz called'); // Add this line
     resetQuiz()
     showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
 function showQuestion(question) {
-    questionElement.innerText = question.question
+    console.log('Show question called with:', question);
+    questionElement.innerHTML = ''; // Clear previous question and image
+    const questionText = document.createElement('div');
+    questionText.textContent = question.question;
+    questionElement.appendChild(questionText);
+
     if (question.image) {
         const imageElement = document.createElement('img')
         imageElement.src = question.image
@@ -152,39 +151,67 @@ function selectAnswer(e) {
     Array.from(answerBtns.children).forEach(button => {
         setCorrectOrWrongClass(button, button.dataset.correct === 'true')
     })
-    userAnswers[currentQuestionIndex] = correct ? true : false;
+    userAnswers[currentQuestionIndex] = correct;
 
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextQuestionBtn.classList.remove('hide')
     } else {
         startBtn.innerText = 'Restart'
         startBtn.classList.remove('hide')
+        showScore();
     }
 }
 
-function setCorrectOrWrongClass(answerAttempt, correct) {
-    clearCorrectOrWrongClass(answerAttempt)
+function setCorrectOrWrongClass(element, correct) {
+    clearCorrectOrWrongClass(element)
     if (correct) {
-        answerAttempt.classList.add('correct')
+        element.classList.add('correct')
     } else {
-        answerAttempt.classList.add('wrong')
+        element.classList.add('wrong')
     }
 }
 
-function clearCorrectOrWrongClass(answerAttempt) {
-    answerAttempt.classList.remove('correct')
-    answerAttempt.classList.remove('wrong')
+function clearCorrectOrWrongClass(element) {
+    element.classList.remove('correct')
+    element.classList.remove('wrong')
 }
 
 /**
- * Programming function to call next question of the quiz
+ * Programming function to load the next question of the quiz
  */
-function nextQuestion {
-    currentQuestionIndex++
-    loadQuiz()
+function nextQuestion() {
+    if (currentQuestionIndex < shuffledQuestions.length - 1) {
+        currentQuestionIndex++
+        loadQuiz()
+    } else {
+        showScore();
+    }
+}
+/**
+ * Setting up the scoreboard to show results
+ */
+function showScore() {
+    questionContainer.classList.add('hide')
+    const quizContainer = document.getElementById('quiz-container')
+    quizContainer.innerHTML = ""
+
+    let correctCount = userAnswers.filter(answer => answer).length;
+
+    const scoreMessage = document.createElement('div')
+    scoreMessage.classList.add('quiz-score');
+    scoreMessage.innerHTML = `<h2>Quiz Complete!</h2><p>You got ${correctCount} out of ${shuffledQuestions.length} questions correct.</p>
+<p>${correctCount >= shuffledQuestions.length / 2 ? 'You know a lot! Did you read the novel?' : 'Better luck next time!'}</p>`;
+
+    quizContainer.appendChild(scoreMessage);
+
+    const restartButton = document.createElement('button');
+    restartButton.innerText = 'Restart';
+    restartButton.classList.add('btn');
+    restartButton.addEventListener('click', startQuiz);
+    quizContainer.appendChild(restartButton);
 }
 
-// Load the loadMap function after the website will load in the browser
+// Ensure the quiz starts properly when the window loads
 window.onload = function () {
     loadMap();
-}
+};
