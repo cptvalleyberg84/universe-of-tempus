@@ -103,7 +103,26 @@ function resetQuiz() {
 }
 
 function selectAnswer(e) {
+    const selectedAnswerBtn = e.target
+    const correct = selectedAnswerBtn.dataset.correct
+    setCorrectOrWrongClass(document.body, correct)
+    Array.from(answerBtns.children).forEach(button => {
+        setCorrectOrWrongClass(button, button.dataset.correct)
+    })
+}
 
+function setCorrectOrWrongClass(answerAttempt, correct) {
+    clearCorrectOrWrongClass(answerAttempt)
+    if (correct) {
+        answerAttempt.classList.add('correct')
+    } else {
+        answerAttempt.classList.add('wrong')
+    }
+}
+
+function clearCorrectOrWrongClass(answerAttempt) {
+    answerAttempt.classList.remove('correct')
+    answerAttempt.classList.remove('wrong')
 }
 
 const questions = [{
