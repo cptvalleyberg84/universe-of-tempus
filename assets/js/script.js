@@ -80,6 +80,8 @@ const questionContainer = document.getElementById('question-container');
 const nextQuestionBtn = document.getElementById('next-question');
 const questionElement = document.getElementById('question');
 const answerBtns = document.getElementById('answer-buttons');
+// Preserving the same section size through the quiz
+const quizSection = document.getElementById('quiz-section');
 
 let shuffledQuestions, currentQuestionIndex;
 let quizStarted = false;
@@ -107,6 +109,15 @@ function startQuiz() {
     quizStarted = true;
     // Show the question container
     questionContainer.classList.remove('hide');
+    //Preserving the same section size through the quiz
+    quizSection.style.maxWidth = '800px';
+    quizSection.style.height = '700px';
+    quizSection.style.marginBottom = '60px';
+    // Scroll to the quiz section
+    quizSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
     // Load the first quiz question
     loadQuiz();
 }
