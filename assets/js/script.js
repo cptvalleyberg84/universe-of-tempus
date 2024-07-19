@@ -1,7 +1,7 @@
 // Declare map locations data array
 const locations = [{
         name: "Holy Cross Mountains",
-        description: "'They may not be the tallest, but they are certainly some of the oldest natural formations in Europe. (...) Lands where pagans loved to live freely. Where the long lustful nights full of barbaric drinks and rituals around the bonfire gave birth to the legends of Baba Yaga.'",
+        description: "'They may not be the tallest, but they are certainly some of the oldest natural formations in Europe. (...) Lands where pagans loved to live freely. Where the long lustful nights full of barbaric drinks and rituals around the bonfire gave birth to the legends of Baba Yaga.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Chapter 1: The Origin</span>",
         col: 64,
         row: 27
     },
