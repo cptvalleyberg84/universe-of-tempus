@@ -36,9 +36,15 @@
 
 1. [Build A Quiz App With JavaScript](https://www.youtube.com/watch?v=riDzcEQbX6k)
 
+2. [Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 
+3. [miro board](https://miro.com)
 
+4. [Array.prototype.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
+5. [Array.from()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
+
+6. []()
 
 
 ## Bugs section
