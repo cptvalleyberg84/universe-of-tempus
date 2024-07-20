@@ -213,6 +213,7 @@ section {
     outline: none;
     font-weight: bold;
     font-size: 1.2rem;
+    font-family: "Libre Caslon Text", serif;
     cursor: pointer;
     box-shadow: 0 0 10px 2px;
     transition: background-color 0.3s;

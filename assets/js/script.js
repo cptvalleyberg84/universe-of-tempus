@@ -3,15 +3,57 @@ const locations = [{
         name: "Holy Cross Mountains",
         description: "'They may not be the tallest, but they are certainly some of the oldest natural formations in Europe. (...) Lands where pagans loved to live freely. Where the long lustful nights full of barbaric drinks and rituals around the bonfire gave birth to the legends of Baba Yaga.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Chapter 1: The Origin</span>",
         col: 64,
-        row: 27
+        row: 26
     },
     {
         name: "High School",
-        description: "'The first days of year one were the most important. Older students would recognize who was made of what after primary school. Traditional bullying greetings had begun. Bullies searched for the cats on first breaks. A cat was a rookie. A new guy. Someone they didn’t know. Someone they could cut down in size.'",
-        col: 15,
+        description: "'The first days of year one were the most important. Older students would recognize who was made of what after primary school. Traditional bullying greetings had begun. Bullies searched for the cats on first breaks. A cat was a rookie. A new guy. Someone they didn’t know. Someone they could cut down in size.''<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 1: The Origin<br>Chapter 8: Journey</span>",
+        col: 16,
         row: 72
     },
-    // Add 4-6 locations more
+    {
+        name: "Space Shuttle of the old tech",
+        description: "'(...)We had even landed a few robots on Mars, which drove around gathering and sending data, including videos back to Earth. Humans were still not ready to leave our planet’s zone. The technology to travel in space hadn’t really improved much since the first visit to the moon.<br>Space shuttles still were working based on the old rocket engine. Burning fuel as a main source of power. Using tons of it just to get out of Earth’s gravity. These ships were made for just a couple of people, but there were great plans for the colonization of Mars.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 2: The SCrutiny<br>Chapter 26: Humanity Composition</span>",
+        col: 87,
+        row: 18
+    },
+    {
+        name: "Edward Teslenstein",
+        description: "'(...)I never thought of myself as anyone special. Nor anyone who would experience so many complex moral contemplations. I would even often say that nobody is perfect—and especially not me myself. As I saw double, the confusion brought by these tormenting thoughts didn’t allow me to settle for a moment. I was forced to assume and have faith that I assumed well. I was not ready to believe I was wise enough to know. I called it a blessing of guessing. An ability of my inner duality. Forever to be so insecure and certain at the very same time.''<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 2: The Scrutiny<br>Chapter 18: Questioning Knowledge</span>",
+        col: 49.3,
+        row: 83
+    },
+    {
+        name: "",
+        description: "'''<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 1: The Origin<br>Chapter 8: Journey</span>",
+        col: 1,
+        row: 1
+    },
+    {
+        name: "",
+        description: "'''<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 1: The Origin<br>Chapter 8: Journey</span>",
+        col: 1,
+        row: 1
+    },
+    {
+        name: "",
+        description: "'''<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 1: The Origin<br>Chapter 8: Journey</span>",
+        col: 1,
+        row: 1
+    },
+    {
+        name: "",
+        description: "'''<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 1: The Origin<br>Chapter 8: Journey</span>",
+        col: 1,
+        row: 1
+    },
+    {
+        name: "",
+        description: "'''<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 1: The Origin<br>Chapter 8: Journey</span>",
+        col: 1,
+        row: 1
+    },
+
 ]
 
 // Setting up main variables for the Map Section
