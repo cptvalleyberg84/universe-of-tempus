@@ -1,57 +1,57 @@
 // Declare map locations data array
 const locations = [{
         name: "Holy Cross Mountains",
-        description: "'They may not be the tallest, but they are certainly some of the oldest natural formations in Europe. (...) Lands where pagans loved to live freely. Where the long lustful nights full of barbaric drinks and rituals around the bonfire gave birth to the legends of Baba Yaga.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Chapter 1: The Origin</span>",
+        description: "'They may not be the tallest, but they are certainly some of the oldest natural formations in Europe. (...) Lands where pagans loved to live freely. Where the long lustful nights full of barbaric drinks and rituals around the bonfire gave birth to the legends of Baba Yaga.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 1: The Origin<br>Chapter 1: Straight Street Ground</span>",
         col: 64,
         row: 26
     },
     {
         name: "High School",
-        description: "'The first days of year one were the most important. Older students would recognize who was made of what after primary school. Traditional bullying greetings had begun. Bullies searched for the cats on first breaks. A cat was a rookie. A new guy. Someone they didn’t know. Someone they could cut down in size.''<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 1: The Origin<br>Chapter 8: Journey</span>",
+        description: "'The first days of year one were the most important. Older students would recognize who was made of what after primary school. Traditional bullying greetings had begun. Bullies searched for the cats on first breaks. A cat was a rookie. A new guy. Someone they didn’t know. Someone they could cut down in size.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 1: The Origin<br>Chapter 8: Journey</span>",
         col: 16,
         row: 72
     },
     {
         name: "Space Shuttle of the old tech",
-        description: "'(...)We had even landed a few robots on Mars, which drove around gathering and sending data, including videos back to Earth. Humans were still not ready to leave our planet’s zone. The technology to travel in space hadn’t really improved much since the first visit to the moon.<br>Space shuttles still were working based on the old rocket engine. Burning fuel as a main source of power. Using tons of it just to get out of Earth’s gravity. These ships were made for just a couple of people, but there were great plans for the colonization of Mars.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 2: The SCrutiny<br>Chapter 26: Humanity Composition</span>",
+        description: "'(...)We had even landed a few robots on Mars, which drove around gathering and sending data, including videos back to Earth. Humans were still not ready to leave our planet’s zone. The technology to travel in space hadn’t really improved much since the first visit to the moon.<br>Space shuttles still were working based on the old rocket engine. Burning fuel as a main source of power. Using tons of it just to get out of Earth’s gravity. These ships were made for just a couple of people, but there were great plans for the colonization of Mars.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 2: The Scrutiny<br>Chapter 26: Humanity Composition</span>",
         col: 87,
         row: 18
     },
     {
         name: "Edward Teslenstein",
-        description: "'(...)I never thought of myself as anyone special. Nor anyone who would experience so many complex moral contemplations. I would even often say that nobody is perfect—and especially not me myself. As I saw double, the confusion brought by these tormenting thoughts didn’t allow me to settle for a moment. I was forced to assume and have faith that I assumed well. I was not ready to believe I was wise enough to know. I called it a blessing of guessing. An ability of my inner duality. Forever to be so insecure and certain at the very same time.''<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 2: The Scrutiny<br>Chapter 18: Questioning Knowledge</span>",
+        description: "'(...)I never thought of myself as anyone special. Nor anyone who would experience so many complex moral contemplations. I would even often say that nobody is perfect—and especially not me myself. As I saw double, the confusion brought by these tormenting thoughts didn’t allow me to settle for a moment. I was forced to assume and have faith that I assumed well. I was not ready to believe I was wise enough to know. I called it a blessing of guessing. An ability of my inner duality. Forever to be so insecure and certain at the very same time.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 2: The Scrutiny<br>Chapter 18: Questioning Knowledge</span>",
         col: 49.3,
         row: 83
     },
     {
-        name: "",
-        description: "'''<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 1: The Origin<br>Chapter 8: Journey</span>",
-        col: 1,
-        row: 1
+        name: "TEMPUS One",
+        description: "'I went back to the captain’s armchair. Realizing what had to be done took a moment. I knew Mars wouldn’t be particularly interesting on my journey. I knew I’d just go there to put my foot down. Then I had to go back to modify the ship and prepare for the real exploration escapade.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 3: The TEMPUS<br>Chapter 36: Red Destination</span>",
+        col: 78,
+        row: 12
     },
     {
-        name: "",
-        description: "'''<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 1: The Origin<br>Chapter 8: Journey</span>",
-        col: 1,
-        row: 1
+        name: "TEMPUS Artificial Intelligence Assistant",
+        description: "'TAIA was fluent in every language existing in human history—including dead languages, digital languages, and scientific languages—and had all knowledge ever discovered by human beings. Additionally, it was developing modes of communication with animals as training for possible extraterrestrial contact. Learning was what AI did.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 3: The TEMPUS<br>Chapter 45: Thoughtful Advancement</span>",
+        col: 75,
+        row: 72
     },
     {
-        name: "",
-        description: "'''<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 1: The Origin<br>Chapter 8: Journey</span>",
-        col: 1,
-        row: 1
+        name: "TEMPUS Suit",
+        description: "'Being quite nervous, I couldn’t maintain a straight posture, but after a while, I realized I was in my T-Suit. I could get out of there anytime I wanted. That boosted my confidence a bit.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 3: The TEMPUS<br>Chapter 39: Kind Rebellion</span>",
+        col: 50,
+        row: 85
     },
     {
-        name: "",
-        description: "'''<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 1: The Origin<br>Chapter 8: Journey</span>",
-        col: 1,
-        row: 1
+        name: "Edward's Dreams",
+        description: "'The gates were wide open. It almost seemed like they had waited for me to pass through them. While I took the course and levitated towards these open heavens, my inner self awoke and began to resist the will of this “dream.” I began to decline and break out from this gracious privilege of joining the divine. It was not the right time to enter the blissful heavens. There was much to do back home. There were many things left for me to change back on Earth.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 1: The Origin<br>Chapter 15: The Spirit Drive</span>",
+        col: 15,
+        row: 18
     },
     {
-        name: "",
-        description: "'''<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 1: The Origin<br>Chapter 8: Journey</span>",
-        col: 1,
-        row: 1
+        name: "Edward's Mind",
+        description: "'Always deep in thought. Completely disconnected from the surrounding reality. Living in an alternate world. Step by step. Part to part putting its pieces together just to find out what the core of global problems might be. To find the genesis of the state that I came to face on this earth. To understand ourselves as a civilization.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 2: The Scrutiny<br>Chapter 23: Conscious Insights</span>",
+        col: 50,
+        row: 30
     },
 
 ]
