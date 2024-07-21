@@ -50,7 +50,6 @@ section {
 
 /* The MAP Section */
 #map-section {
-    background-color: aquamarine;
     max-width: 800px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.8);
@@ -62,8 +61,15 @@ section {
     padding: 12px 0;
 }
 
+#instruction-button {
+    margin: 3px;
+}
+
+/* .map-section-description {
+    padding: 0px 6px 15px;
+} */
+
 #map-container {
-    background-color: pink;
     max-width: 800px;
     /* adding position relative - for the floating point to respond better to responsivity */
     position: relative;
