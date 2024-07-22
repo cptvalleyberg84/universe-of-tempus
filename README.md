@@ -52,6 +52,12 @@
 
 8. [dialog = the easiest way to make a popup modal](https://www.youtube.com/watch?v=TAB_v6yBXIE)
 
+9. [How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial](https://www.youtube.com/watch?v=f4fB9Xg2JEY)
+
+10. [Build A Quiz App With JavaScript | Quiz Website using HTML CSS & JavaScript](https://www.youtube.com/watch?v=LJ4PZ8JnRCg)
+
+11. [How To Make Quiz App Using JavaScript | Build Quiz App With HTML CSS & JavaScript](https://www.youtube.com/watch?v=PBcqGxrr9g8)
+
 ### Images:
 1. [Quiz Images were generated with bing image creator](https://www.bing.com/images/create#)
 

@@ -388,7 +388,7 @@ function showScore() {
     // Determine the message based on the score
     let message;
     if (correctCount === shuffledQuestions.length) {
-        message = "WOW!! Congratulations!! You got all 12 out of 12 questions correct!! Contact me to get your code for a free audiobook!";
+        message = '<marquee width="90%" style="border:black 2px solid"><b>WOW!! Congratulations!! You got all 12 out of 12 questions correct!! Contact me to get your code for a free audiobook!</b></marquee>';
     } else if (correctCount >= 7) {
         message = "Nice Try! Did you read the novel?";
     } else if (correctCount >= 4) {
