@@ -384,9 +384,22 @@ function showScore() {
     const scoreMessage = document.createElement('div');
     // Add a class to the score message
     scoreMessage.classList.add('quiz-score');
-    // Set the score message content
+
+    // Determine the message based on the score
+    let message;
+    if (correctCount === shuffledQuestions.length) {
+        message = "WOW!! Congratulations!! You got all 12 out of 12 questions correct!! Contact me to get your code for a free audiobook!";
+    } else if (correctCount >= 7) {
+        message = "Nice Try! Did you read the novel?";
+    } else if (correctCount >= 4) {
+        message = "You're doing great! All the answers are on the Map.";
+    } else {
+        message = "Better luck next time! Check out the map maybe?";
+    }
+
+    // Set the score message
     scoreMessage.innerHTML = `<h2>Quiz Complete!</h2><p>You got ${correctCount} out of ${shuffledQuestions.length} questions correct.</p>
-<p>${correctCount >= shuffledQuestions.length / 2 ? 'You know a lot! Did you read the novel?' : 'Better luck next time!'}</p>`;
+    <p>${message}</p>`;
 
     // Append the score message to the quiz container
     quizContainer.appendChild(scoreMessage);
