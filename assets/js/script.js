@@ -213,7 +213,7 @@ function startQuiz() {
     questionContainer.classList.remove('hide');
     //Preserving the same section size through the quiz
     quizSection.style.maxWidth = '800px';
-    quizSection.style.height = '786px';
+    quizSection.style.height = '810px';
     quizSection.style.marginBottom = '60px';
     // Scroll to the quiz section
     quizSection.scrollIntoView({
@@ -239,6 +239,11 @@ function loadQuiz() {
 function showQuestion(question) {
     // Clear previous question and image
     questionElement.innerHTML = '';
+
+    // Show Current Question Number
+    const questionsLeft = document.getElementById('questions-left');
+    questionsLeft.textContent = `Question ${currentQuestionIndex + 1} of ${shuffledQuestions.length}`;
+
     // Create a div for the question text
     const questionText = document.createElement('div');
     // Set the question text 
@@ -302,6 +307,12 @@ function selectAnswer(e) {
     Array.from(answerBtns.children).forEach(button => {
         setCorrectOrWrongClass(button, button.dataset.correct === 'true');
     });
+
+    // Mark the chosen incorrect answer (so it looks a bit different than other ones)
+    if (!correct) {
+        selectedAnswerBtn.classList.add('selected-wrong');
+    }
+
     // Store the user's answer
     userAnswers[currentQuestionIndex] = correct;
 

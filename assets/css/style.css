@@ -238,12 +238,18 @@ section {
 .btn.correct {
     background-color: lightgreen;
     border-color: rgb(58, 95, 58);
+    border: 5px solid rgb(58, 95, 58);
 }
 
 .btn.wrong {
     background-color: lightcoral;
     border-color: rgb(168, 87, 87);
-    transition: 6s;
+    transition: 1.5s;
+}
+
+.selected-wrong {
+    border: 5px solid green;
+    background-color: #1f1717;
 }
 
 .start-btn,
