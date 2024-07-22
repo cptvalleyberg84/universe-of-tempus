@@ -27,7 +27,7 @@ const locations = [{
         name: "TEMPUS",
         description: "'(...)I decided to make the shuttle ready for radio and satellite communication. Develop it more before exiting the Earth’s atmosphere. There was much to do. At least, I knew that the Tempus was working. The Tesla Electro Magnetic Power Unit Shuttle was ready, and only a few more weeks of research divided me from reaching Mars(...)'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 3: The TEMPUS<br>Chapter 28: The Reverse Day</span> <br>'I went back to the captain’s armchair. Realizing what had to be done took a moment. I knew Mars wouldn’t be particularly interesting on my journey. I knew I’d just go there to put my foot down. Then I had to go back to modify the ship and prepare for the real exploration escapade.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 3: The TEMPUS<br>Chapter 36: Red Destination</span>",
         col: 78,
-        row: 12
+        row: 16
     },
     {
         name: "TEMPUS Artificial Intelligence Assistant",
@@ -39,7 +39,7 @@ const locations = [{
         name: "TEMPUS Suit",
         description: "'Being quite nervous, I couldn’t maintain a straight posture, but after a while, I realized I was in my T-Suit. I could get out of there anytime I wanted. That boosted my confidence a bit.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 3: The TEMPUS<br>Chapter 39: Kind Rebellion</span>",
         col: 50,
-        row: 85
+        row: 86
     },
     {
         name: "Edward's Dream",
@@ -116,7 +116,7 @@ const quizQuestions = [{
     },
     {
         question: "What does TAIA stand for?",
-        options: ["Technical Automated Interactive Agent", "Telecommunication AI Assistant", "Tech Advanced Intelligent Agent", "TEMPUS Artificial Intelligence Assistant"],
+        options: ["Technical Automated Interactive Agent", "Train Analitycal Information Assocciation ", "Tech Advanced Intelligent Animal", "TEMPUS Artificial Intelligence Assistant"],
         correctAnswer: 3,
         image: "assets/images/taia.jpg"
     },
