@@ -392,6 +392,22 @@ function showScore() {
     quizContainer.appendChild(restartBtn);
 }
 
+// Instructions Button Dialog Setup
+// Defining Variables
+const instructionsTxt = document.getElementById('instructions');
+const openInstructions = document.getElementById('instruction-button');
+const closeInstructions = document.getElementById('close-instructions');
+
+// Set up events listener for the button
+openInstructions.addEventListener('click', () => {
+    instructionsTxt.showModal();
+});
+
+closeInstructions.addEventListener('click', () => {
+    instructionsTxt.close();
+});
+
+
 // Load the map when the window finishes loading
 window.onload = function () {
     loadMap();

@@ -46,6 +46,10 @@
 
 6. [Element: scrollIntoView() method](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView)
 
+7. [Learn CSS position in 5 minutes](https://www.youtube.com/watch?v=Pp7UXS3P6jY)
+
+8. []()
+
 
 ## Bugs section
 had mutliple issues
