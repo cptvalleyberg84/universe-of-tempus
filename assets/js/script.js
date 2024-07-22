@@ -12,7 +12,7 @@ const locations = [{
         row: 72
     },
     {
-        name: "Space Shuttle of the old tech",
+        name: "Old Technology",
         description: "'(...)We had even landed a few robots on Mars, which drove around gathering and sending data, including videos back to Earth. Humans were still not ready to leave our planet’s zone. The technology to travel in space hadn’t really improved much since the first visit to the moon.<br>Space shuttles still were working based on the old rocket engine. Burning fuel as a main source of power. Using tons of it just to get out of Earth’s gravity. These ships were made for just a couple of people, but there were great plans for the colonization of Mars.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 2: The Scrutiny<br>Chapter 26: Humanity Composition</span>",
         col: 87,
         row: 18
@@ -24,8 +24,8 @@ const locations = [{
         row: 83
     },
     {
-        name: "TEMPUS One",
-        description: "'I went back to the captain’s armchair. Realizing what had to be done took a moment. I knew Mars wouldn’t be particularly interesting on my journey. I knew I’d just go there to put my foot down. Then I had to go back to modify the ship and prepare for the real exploration escapade.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 3: The TEMPUS<br>Chapter 36: Red Destination</span>",
+        name: "TEMPUS",
+        description: "'(...)I decided to make the shuttle ready for radio and satellite communication. Develop it more before exiting the Earth’s atmosphere. There was much to do. At least, I knew that the Tempus was working. The Tesla Electro Magnetic Power Unit Shuttle was ready, and only a few more weeks of research divided me from reaching Mars(...)'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 3: The TEMPUS<br>Chapter 28: The Reverse Day</span> <br>'I went back to the captain’s armchair. Realizing what had to be done took a moment. I knew Mars wouldn’t be particularly interesting on my journey. I knew I’d just go there to put my foot down. Then I had to go back to modify the ship and prepare for the real exploration escapade.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 3: The TEMPUS<br>Chapter 36: Red Destination</span>",
         col: 78,
         row: 12
     },
@@ -42,7 +42,7 @@ const locations = [{
         row: 85
     },
     {
-        name: "Edward's Dreams",
+        name: "Edward's Dream",
         description: "'The gates were wide open. It almost seemed like they had waited for me to pass through them. While I took the course and levitated towards these open heavens, my inner self awoke and began to resist the will of this “dream.” I began to decline and break out from this gracious privilege of joining the divine. It was not the right time to enter the blissful heavens. There was much to do back home. There were many things left for me to change back on Earth.'<br><span style='display: block; text-align: right; margin-top: 10px; font-weight: bold;'>Part 1: The Origin<br>Chapter 15: The Spirit Drive</span>",
         col: 15,
         row: 18
@@ -113,7 +113,56 @@ const quizQuestions = [{
         correctAnswer: 0,
         image: "assets/images/map-of-universe.jpeg"
     },
-    // Add 8-10 more questions here
+    {
+        question: "What does TAIA stand for?",
+        options: ["Technical Automated Interactive Agent", "Telecommunication AI Assistant", "Tech Advanced Intelligent Agent", "TEMPUS Artificial Intelligence Assistant"],
+        correctAnswer: 3,
+    },
+    {
+        question: "Is TEMPUS a:",
+        options: ["Type of Space Shuttle", "Planet", "Weapon", "Time-traveling device"],
+        correctAnswer: 0,
+    },
+    {
+        question: "The T-Suit is an extremly versatilve device. What is it primarily used for?",
+        options: ["Underwater diving", "Mountain Climbing", "Space Exploration", "Virtual Reality gaming"],
+        correctAnswer: 2,
+    },
+    {
+        question: "What planet is the 'Red Destination'?",
+        options: ["Venus", "Mars", "Saturn", "Jupiter"],
+        correctAnswer: 1,
+    },
+    {
+        question: "What condition does Edward experience, causing him to see double?",
+        options: ["Astigmatism", "Myopia", "Hyperopia", "Diplopia"],
+        correctAnswer: 3,
+    },
+    {
+        question: "What technology does the TEMPUS Engine use?",
+        options: ["Solar Power", "Nuclear Fusion", "Gravity Speed", "Rocket Fule"],
+        correctAnswer: 2,
+    },
+    {
+        question: "What is a 'cat' in the High School?",
+        options: ["A teacher", "A bully", "A rookie student", "A pet"],
+        correctAnswer: 2,
+    },
+    {
+        question: "What kind of rituals are associated with the history of the Holy Cross Mountains?",
+        options: ["Religious Ceremonies", "Pagan Rituals", "Scientific experiments", "Military drills"],
+        correctAnswer: 1,
+    },
+    {
+        question: "What has unique ability to boost Edward's confidence?",
+        options: ["Wearing the T-Suit", "Finding a treasure", "Meeting an old friend", "Winning a battle"],
+        correctAnswer: 0,
+    },
+    {
+        question: "What is a blessing of guessing?",
+        options: ["A cooking recipe", "A title of a book", "TAIA's password", "'An ability of my inner duality'"],
+        correctAnswer: 3,
+    },
 ];
 
 // Defining Quiz Variables
