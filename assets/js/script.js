@@ -280,12 +280,12 @@ function showQuestion(question) {
 }
 
 /**
- * Function to reset the quiz for the current question
+ * Function to reset the quiz for the next question
  */
 function resetQuiz() {
     // Hide the next question button
     nextQuestionBtn.classList.add('hide');
-    // While there are child elements in the answer buttons container remove the child element
+    // Clear out existing answer buttons before loading new ones
     while (answerBtns.firstChild) {
         answerBtns.removeChild(answerBtns.firstChild);
         // Clear question and Image
@@ -308,7 +308,7 @@ function selectAnswer(e) {
         setCorrectOrWrongClass(button, button.dataset.correct === 'true');
     });
 
-    // Mark the chosen incorrect answer (so it looks a bit different than other ones)
+    // Mark the chosen incorrect answer (so it looks a bit different than other incorrect answers)
     if (!correct) {
         selectedAnswerBtn.classList.add('selected-wrong');
     }
@@ -389,7 +389,7 @@ function showScore() {
     let message;
     if (correctCount === shuffledQuestions.length) {
         message = '<marquee width="90%" style="border:black 2px solid"><b>WOW!! Congratulations!! You got all 12 out of 12 questions correct!! Contact me to get your code for a free audiobook!</b></marquee>';
-    } else if (correctCount >= 7) {
+    } else if (correctCount >= 8) {
         message = "Nice Try! Did you read the novel?";
     } else if (correctCount >= 4) {
         message = "You're doing great! All the answers are on the Map.";
@@ -422,7 +422,7 @@ const instructionsTxt = document.getElementById('instructions');
 const openInstructions = document.getElementById('instruction-button');
 const closeInstructions = document.getElementById('close-instructions');
 
-// Set up events listener for the button
+// Set up events listeners for the instructions button
 openInstructions.addEventListener('click', () => {
     instructionsTxt.showModal();
 });
