@@ -90,6 +90,12 @@ function loadMap() {
             // Show the location description
             mapDescription.innerHTML = `<h3>${location.name}</h3><p>${location.description}</p>`;
 
+            // Scroll down to the map description so that it is visible at all times
+            mapContainer.scrollIntoView({
+                behavior: "smooth",
+                block: 'start'
+            })
+
             // Add a marker to a clicked dot so it's different than not clicked ones
             floatingDot.classList.add('clicked-dot');
         });
