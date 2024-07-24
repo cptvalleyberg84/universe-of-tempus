@@ -481,27 +481,18 @@ function restartQuizBtn() {
     scoreMessage.classList.add('hide');
     restartBtn.classList.add('hide');
     startQuiz();
+    removeScoreBoard();
+}
 
-
-
-    // const quizContainer = document.getElementById('quiz-container')
-    // quizContainer.innerHTML = `       <button id="start-btn" class="btn">Start Quiz</button>
-    //                 <div id="question-container" class="hide">
-    //                     <div id="question"></div>
-    //                     <div id="answer-buttons" class="answer-btn-grid"></div>
-    //                     <button id="next-question" class="btn hide">Next Question</button>
-    //                     <div class="questions-left" id="questions-left"></div>
-    // `;
-    // const startBtn = document.getElementById('start-btn');
-
-
-    // currentQuestionIndex = 0;
-    // userAnswers = [];
-    // quizStarted = false;
-
-    // startBtn.addEventListener('click', startQuiz);
-
-    // quizContainer.appendChild(startBtn);
+function removeScoreBoard() {
+    const scoreMessage = document.querySelector('#score-message-id');
+    if (scoreMessage) {
+        scoreMessage.remove();
+    }
+    const restartBtn = document.querySelector('#restart-button-id');
+    if (restartBtn) {
+        restartBtn.remove();
+    }
 }
 
 // Instructions Button Dialog Setup
