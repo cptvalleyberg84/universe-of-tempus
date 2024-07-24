@@ -114,14 +114,20 @@ section {
     height: 18px;
     background-color: rgb(248, 248, 248, 0.9);
     border-radius: 50%;
+    border: 2px solid black;
     cursor: pointer;
     /* Add animation */
     animation: pulse 1.2s infinite;
     transform: translate(-50%, -50%);
 }
 
+.clicked-dot {
+    background-color: red;
+    border: 2px solid black;
+}
+
 .floating-dot:hover {
-    background-color: white;
+    background-color: rgba(171, 212, 58);
     transform: scale(1.2);
 }
 

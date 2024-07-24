@@ -24,6 +24,8 @@ But when you do, and it's not midnight - it can even bring a smile - that this d
 
 new issue arising: if I need to have the quiz questions always on the same height? - if so - I couldn't yet figure out how to do so. I tried placing a placholder image, and different JS for replacing it, but so far it was always the same result - answers moving up or down, between the questions.
 
+The restart button story.
+
 # Deployment
 
 
