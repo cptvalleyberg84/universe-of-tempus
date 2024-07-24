@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 // Declare map locations data array
 const locations = [{
         name: "Holy Cross Mountains",
@@ -114,66 +116,66 @@ const quizQuestions = [{
         correctAnswer: 0,
         image: "assets/images/edwards-dilemmatic-character.png"
     },
-    {
-        question: "What does TAIA stand for?",
-        options: ["Technical Automated Interactive Agent", "Train Analitycal Information Assocciation ", "Tech Advanced Intelligent Animal", "TEMPUS Artificial Intelligence Assistant"],
-        correctAnswer: 3,
-        image: "assets/images/taia.jpg"
-    },
-    {
-        question: "Is TEMPUS a:",
-        options: ["Type of Space Shuttle", "Planet", "Weapon", "Time-traveling device"],
-        correctAnswer: 0,
-        image: "assets/images/scientists-building-tempus.jpg"
-    },
-    {
-        question: "The T-Suit is an extremly versatilve device. What is it primarily used for?",
-        options: ["Underwater diving", "Mountain Climbing", "Space Exploration", "Virtual Reality gaming"],
-        correctAnswer: 2,
-        image: "assets/images/first-dream1.png"
-    },
-    {
-        question: "What planet is the 'Red Destination'?",
-        options: ["Venus", "Mars", "Saturn", "Jupiter"],
-        correctAnswer: 1,
-        image: "assets/images/cylinder.jpg"
-    },
-    {
-        question: "What condition does Edward experience, causing him to see double?",
-        options: ["Astigmatism", "Myopia", "Hyperopia", "Diplopia"],
-        correctAnswer: 3,
-        image: "assets/images/scatterbrained-artist-scientist3.png"
-    },
-    {
-        question: "What technology does the TEMPUS Engine use?",
-        options: ["Solar Power", "Nuclear Fusion", "Gravity Speed", "Rocket Fule"],
-        correctAnswer: 2,
-        image: "assets/images/cylinder3.jpg"
-    },
-    {
-        question: "What is a 'cat' in the High School?",
-        options: ["A teacher", "A bully", "A rookie student", "A pet"],
-        correctAnswer: 2,
-        image: "assets/images/scatterbrained-artist-scientist2.png"
-    },
-    {
-        question: "What kind of rituals are associated with the history of the Holy Cross Mountains?",
-        options: ["Religious Ceremonies", "Pagan Rituals", "Scientific experiments", "Military drills"],
-        correctAnswer: 1,
-        image: "assets/images/pagans-loved-to-live-freely.png"
-    },
-    {
-        question: "What has unique ability to boost Edward's confidence?",
-        options: ["Wearing the T-Suit", "Finding a treasure", "Meeting an old friend", "Winning a battle"],
-        correctAnswer: 0,
-        image: "assets/images/scatterbrained-artist-scientist4.jpg"
-    },
-    {
-        question: "What is a blessing of guessing?",
-        options: ["A cooking recipe", "A title of a book", "TAIA's password", "'An ability of my inner duality'"],
-        correctAnswer: 3,
-        image: "assets/images/cylinder2.jpg"
-    },
+    // {
+    //     question: "What does TAIA stand for?",
+    //     options: ["Technical Automated Interactive Agent", "Train Analitycal Information Assocciation ", "Tech Advanced Intelligent Animal", "TEMPUS Artificial Intelligence Assistant"],
+    //     correctAnswer: 3,
+    //     image: "assets/images/taia.jpg"
+    // },
+    // {
+    //     question: "Is TEMPUS a:",
+    //     options: ["Type of Space Shuttle", "Planet", "Weapon", "Time-traveling device"],
+    //     correctAnswer: 0,
+    //     image: "assets/images/scientists-building-tempus.jpg"
+    // },
+    // {
+    //     question: "The T-Suit is an extremly versatilve device. What is it primarily used for?",
+    //     options: ["Underwater diving", "Mountain Climbing", "Space Exploration", "Virtual Reality gaming"],
+    //     correctAnswer: 2,
+    //     image: "assets/images/first-dream1.png"
+    // },
+    // {
+    //     question: "What planet is the 'Red Destination'?",
+    //     options: ["Venus", "Mars", "Saturn", "Jupiter"],
+    //     correctAnswer: 1,
+    //     image: "assets/images/cylinder.jpg"
+    // },
+    // {
+    //     question: "What condition does Edward experience, causing him to see double?",
+    //     options: ["Astigmatism", "Myopia", "Hyperopia", "Diplopia"],
+    //     correctAnswer: 3,
+    //     image: "assets/images/scatterbrained-artist-scientist3.png"
+    // },
+    // {
+    //     question: "What technology does the TEMPUS Engine use?",
+    //     options: ["Solar Power", "Nuclear Fusion", "Gravity Speed", "Rocket Fule"],
+    //     correctAnswer: 2,
+    //     image: "assets/images/cylinder3.jpg"
+    // },
+    // {
+    //     question: "What is a 'cat' in the High School?",
+    //     options: ["A teacher", "A bully", "A rookie student", "A pet"],
+    //     correctAnswer: 2,
+    //     image: "assets/images/scatterbrained-artist-scientist2.png"
+    // },
+    // {
+    //     question: "What kind of rituals are associated with the history of the Holy Cross Mountains?",
+    //     options: ["Religious Ceremonies", "Pagan Rituals", "Scientific experiments", "Military drills"],
+    //     correctAnswer: 1,
+    //     image: "assets/images/pagans-loved-to-live-freely.png"
+    // },
+    // {
+    //     question: "What has unique ability to boost Edward's confidence?",
+    //     options: ["Wearing the T-Suit", "Finding a treasure", "Meeting an old friend", "Winning a battle"],
+    //     correctAnswer: 0,
+    //     image: "assets/images/scatterbrained-artist-scientist4.jpg"
+    // },
+    // {
+    //     question: "What is a blessing of guessing?",
+    //     options: ["A cooking recipe", "A title of a book", "TAIA's password", "'An ability of my inner duality'"],
+    //     correctAnswer: 3,
+    //     image: "assets/images/cylinder2.jpg"
+    // },
 ];
 
 // Defining Quiz Variables
@@ -184,6 +186,7 @@ const questionElement = document.getElementById('question');
 const answerBtns = document.getElementById('answer-buttons');
 // Preserving the same section size through the quiz
 const quizSection = document.getElementById('quiz-section');
+
 
 let shuffledQuestions, currentQuestionIndex;
 let quizStarted = false;
@@ -199,29 +202,39 @@ nextQuestionBtn.addEventListener('click', nextQuestion);
  * Start Quiz Function
  */
 function startQuiz() {
+    console.log('Starting startQuiz');
     // Hide the start button
     startBtn.classList.add('hide');
+    console.log('Start button hidden')
     // Shuffle the questions randomly
     shuffledQuestions = quizQuestions.sort(() => Math.random() - .5);
+    console.log('questions shuffled', shuffledQuestions);
     // Set the current question index to 0
     currentQuestionIndex = 0;
+    console.log('Current question index is 0');
     // Clear user answers
     userAnswers = [];
+    console.log('User Answers Cleared');
     // Set quiz started state to true
     quizStarted = true;
+    console.log('Quiz started set to true');
     // Show the question container
     questionContainer.classList.remove('hide');
+    console.log('Question container is displayed')
     //Preserving the same section size through the quiz
     quizSection.style.maxWidth = '800px';
     quizSection.style.height = '810px';
     quizSection.style.marginBottom = '60px';
+    console.log('Quiz section style set');
     // Scroll to the quiz section
     quizSection.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
     });
+    console.log('Scrolled to quiz section');
     // Load the first quiz question
     loadQuiz();
+    console.log('First Quiz question loaded');
 }
 
 /**
@@ -237,12 +250,30 @@ function loadQuiz() {
  * Function to show a question
  */
 function showQuestion(question) {
+    console.log('1. Showing question:', question);
+    const questionContainer = document.querySelector('#question-container');
+    const answerBtns = document.querySelector('#answer-buttons');
+    const questionElement = document.querySelector('#question');
+    const nextQuestionBtn = document.querySelector('#next-question')
+
+    const startBtn = document.querySelector('#start-btn');
+    console.log('2. Selected DOM elements');
+
+    resetQuiz();
+    console.log('3. Quiz reset');
+
+    questionContainer.classList.remove('hide');
+    startBtn.classList.add('hide');
+    console.log('4. Question container shown, start button hidden');
+
     // Clear previous question and image
     questionElement.innerHTML = '';
-
+    answerBtns.innerHTML = '';
+    console.log('5. Cleared previous questtion and answers');
     // Show Current Question Number
     const questionsLeft = document.getElementById('questions-left');
     questionsLeft.textContent = `Question ${currentQuestionIndex + 1} of ${shuffledQuestions.length}`;
+    console.log('6. Showing question number:', questionsLeft.textContent);
 
     // Create a div for the question text
     const questionText = document.createElement('div');
@@ -250,6 +281,7 @@ function showQuestion(question) {
     questionText.textContent = question.question;
     // Append the question text to the question element
     questionElement.appendChild(questionText);
+    console.log('7. Question text set:', questionText.textContent);
 
     // If there is an image for the question - show the image
     if (question.image) {
@@ -261,7 +293,9 @@ function showQuestion(question) {
         imageElement.classList.add('quiz-image');
         // Append the image to the question element
         questionElement.appendChild(imageElement);
+        console.log('8. Question image set:', question.image);
     }
+
     // For each option in the question
     question.options.forEach((option, index) => {
         // Create an answer button element
@@ -276,7 +310,12 @@ function showQuestion(question) {
         button.addEventListener('click', selectAnswer);
         // Append the button to the answer buttons container
         answerBtns.appendChild(button);
+        console.log('9. Added answer button:', option);
     });
+    // Array.from(answerBtns.children).forEach(button => {
+    //     button.addEventListener('click', selectAnswer);
+    // });
+    // nextQuestionBtn.classList.add('hide');
 }
 
 /**
@@ -302,6 +341,8 @@ function selectAnswer(e) {
     // Check if the answer is correct
     const correct = selectedAnswerBtn.dataset.correct === 'true';
     // Set the correct or wrong class on the body element
+    console.log(`Answer selected: ${selectedAnswerBtn.innerText}, Correct: ${correct}`);
+
     setCorrectOrWrongClass(document.body, correct);
     // For each button in the answer buttons container set the correct or wrong class on the button
     Array.from(answerBtns.children).forEach(button => {
@@ -321,9 +362,9 @@ function selectAnswer(e) {
         nextQuestionBtn.classList.remove('hide');
     } else {
         // otherwise change the start button text to "Restart"
-        startBtn.innerText = 'Restart';
+        // 11111 startBtn.innerText = 'Restart';
         // Show the start button
-        startBtn.classList.remove('hide');
+        // 11111 startBtn.classList.remove('hide');
         // Show the user's score
         showScore();
     }
@@ -336,8 +377,10 @@ function setCorrectOrWrongClass(element, correct) {
     // Clear the correct or wrong class from the element
     clearCorrectOrWrongClass(element);
     if (correct) { // If the answer is correct add the correct class to the element
+        console.log(`Setting correct class on element: ${element}`);
         element.classList.add('correct');
     } else { // If the answer is wrong add the wrong class to the element
+        console.log(`Setting wrong class on element: ${element}`);
         element.classList.add('wrong');
     }
 }
@@ -375,7 +418,7 @@ function showScore() {
     // Get the quiz container element
     const quizContainer = document.getElementById('quiz-container');
     // Clear the quiz container
-    quizContainer.innerHTML = "";
+    // quizContainer.innerHTML = "";
 
     // Count the number of correct answers
     let correctCount = userAnswers.filter(answer => answer).length;
@@ -384,11 +427,13 @@ function showScore() {
     const scoreMessage = document.createElement('div');
     // Add a class to the score message
     scoreMessage.classList.add('quiz-score');
+    // Add id to the score message
+    scoreMessage.id = 'score-message-id';
 
     // Determine the message based on the score
     let message;
     if (correctCount === shuffledQuestions.length) {
-        message = '<marquee width="90%" style="border:black 2px solid"><b>WOW!! Congratulations!! You got all 12 out of 12 questions correct!! Contact me to get your code for a free audiobook!</b></marquee>';
+        message = '<marquee width="90%" style="border: 3px solid black; font-size: 30px;"><b>WOW!! Congratulations!! You got all 12 out of 12 questions correct!! Contact me to get your code for a free audiobook!</b></marquee>';
     } else if (correctCount >= 8) {
         message = "Nice Try! Did you read the novel?";
     } else if (correctCount >= 4) {
@@ -404,16 +449,59 @@ function showScore() {
     // Append the score message to the quiz container
     quizContainer.appendChild(scoreMessage);
 
+    // Call the restart button to appear
+    restartQuiz();
+}
+
+/**
+ * Put the restart quiz button onto the Showscore board
+ */
+function restartQuiz() {
+
+    // Get the quiz container
+    const quizContainer = document.getElementById('quiz-container')
     // Create a button for restarting the quiz
     const restartBtn = document.createElement('button');
+    //    Add id to the button
+    restartBtn.id = 'restart-button-id';
     // Add a class to the button
     restartBtn.classList.add('btn');
     // Set the button text to "Restart"
     restartBtn.innerText = 'Restart';
     // Add an event listener to the button for the click event
-    restartBtn.addEventListener('click', () => location.reload());
+    restartBtn.addEventListener('click', restartQuizBtn);
+    // restartBtn.addEventListener('click', () => location.reload());
     // Append the restart button to the quiz container
     quizContainer.appendChild(restartBtn);
+}
+
+function restartQuizBtn() {
+    const scoreMessage = document.querySelector('#score-message-id');
+    const restartBtn = document.querySelector('#restart-button-id');
+    scoreMessage.classList.add('hide');
+    restartBtn.classList.add('hide');
+    startQuiz();
+
+
+
+    // const quizContainer = document.getElementById('quiz-container')
+    // quizContainer.innerHTML = `       <button id="start-btn" class="btn">Start Quiz</button>
+    //                 <div id="question-container" class="hide">
+    //                     <div id="question"></div>
+    //                     <div id="answer-buttons" class="answer-btn-grid"></div>
+    //                     <button id="next-question" class="btn hide">Next Question</button>
+    //                     <div class="questions-left" id="questions-left"></div>
+    // `;
+    // const startBtn = document.getElementById('start-btn');
+
+
+    // currentQuestionIndex = 0;
+    // userAnswers = [];
+    // quizStarted = false;
+
+    // startBtn.addEventListener('click', startQuiz);
+
+    // quizContainer.appendChild(startBtn);
 }
 
 // Instructions Button Dialog Setup
