@@ -230,13 +230,13 @@ function startQuiz() {
 
     //Setting the same size for the section and the whole quiz
     quizSection.style.maxWidth = '800px';
-    quizSection.style.height = '780px';
     quizSection.style.marginBottom = '60px';
 
-    const isSmallScreen = window.matchMedia('(max-width:600px)');
-    if (isSmallScreen.matches) {
-        quizSection.style.height = '920px';
-    }
+    // Add event listener for the screen resize
+    window.addEventListener('resize', responsiveQuiz);
+
+    // Call the responsivity function to set the correct height
+    responsiveQuiz();
 
     // Scroll to the quiz section
     quizSection.scrollIntoView({
@@ -246,6 +246,22 @@ function startQuiz() {
 
     // Load the first quiz question
     loadQuiz();
+}
+
+
+/**
+ * Function to make the quiz responsiveness working live and not only depending on what device the website is viewed
+ */
+function responsiveQuiz() {
+    // Set variable media query type for screens of max width 600px
+    const isSmallScreen = window.matchMedia('(max-width: 600px)').matches;
+    if (isSmallScreen) {
+        //  activate when screen is max 600px
+        quizSection.style.height = '920px';
+    } else {
+        // otherwise set the quiz section size to 780px
+        quizSection.style.height = '780px';
+    }
 }
 
 /**
@@ -420,6 +436,12 @@ function showScore() {
     // Count the number of correct answers
     let correctCount = userAnswers.filter(answer => answer).length;
 
+    // Add the book cover to the scoreboard
+    const scoreImage = document.createElement('img');
+    scoreImage.src = 'assets/images/theageofnewera-cover.jpg';
+    quizContainer.appendChild(scoreImage);
+    scoreImage.classList.add('score-image');
+
     // Create a div for the score message
     const scoreMessage = document.createElement('div');
     // Add a class to the score message
@@ -435,13 +457,13 @@ function showScore() {
     // Determine the message based on the score
     let message;
     if (correctCount === shuffledQuestions.length) {
-        message = '<marquee width="90%" style="border: 3px solid black; font-size: 30px;"><b>WOW!! Congratulations!! You got all 12 out of 12 questions correct!! Contact me to get your code for a free audiobook!</b></marquee>';
+        message = '<marquee width="90%" style="border: 3px solid black; font-size: 30px;"><b>Congratulations!! You got all 12 out of 12 questions correct!! WOW!! Send me phrase: "TEMPUS Tree" to get your code for a free audiobook or the e-book!! Thank you for playing.</b></marquee>';
     } else if (correctCount >= 8) {
-        message = "Nice Try! Did you read the novel?";
+        message = "Nice Try! Did you read the novel? <br>All the answers are on the Map.";
     } else if (correctCount >= 4) {
-        message = "You're doing great! All the answers are on the Map.";
+        message = "You're doing great! <br>All the answers are on the Map.";
     } else {
-        message = "Better luck next time! Check out the map maybe?";
+        message = "Better luck next time! Check out the Map maybe? <br>All the answers are on the Map.";
     }
 
     // Set the score message
@@ -502,6 +524,10 @@ function removeScoreBoard() {
     const restartBtn = document.querySelector('#restart-button-id');
     if (restartBtn) {
         restartBtn.remove();
+    }
+    const scoreImage = document.querySelector('.score-image');
+    if (scoreImage) {
+        scoreImage.remove();
     }
 }
 

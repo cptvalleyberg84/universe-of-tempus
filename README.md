@@ -26,6 +26,8 @@ new issue arising: if I need to have the quiz questions always on the same heigh
 
 The restart button story.
 
+The responsive quiz section story.
+
 # Deployment
 
 
@@ -88,6 +90,8 @@ The restart button story.
 10. [Build A Quiz App With JavaScript | Quiz Website using HTML CSS & JavaScript](https://www.youtube.com/watch?v=LJ4PZ8JnRCg)
 
 11. [How To Make Quiz App Using JavaScript | Build Quiz App With HTML CSS & JavaScript](https://www.youtube.com/watch?v=PBcqGxrr9g8)
+
+12. [Window: resize event](https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event)
 
 ### Images:
 1. [Quiz Images were generated with bing image creator](https://www.bing.com/images/create#)
