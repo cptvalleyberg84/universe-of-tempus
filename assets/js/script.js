@@ -103,7 +103,7 @@ function loadMap() {
         // Empty the location description after clicking anywhere on the map except the floating dots
         mapContainer.addEventListener("click", (event) => {
             if (event.target === mapContainer || event.target === mapImage) {
-                mapDescription.innerHTML = '<p>Click on a location to learn more</p>';
+                mapDescription.innerHTML = '<p class="map-description">Click on a location to learn more</p>';
             }
         });
 
@@ -230,14 +230,18 @@ function startQuiz() {
 
     //Setting the same size for the section and the whole quiz
     quizSection.style.maxWidth = '800px';
-    quizSection.style.height = '810px';
+    quizSection.style.height = '780px';
     quizSection.style.marginBottom = '60px';
-    console.log('Quiz section style set');
+
+    const isSmallScreen = window.matchMedia('(max-width:600px)');
+    if (isSmallScreen.matches) {
+        quizSection.style.height = '920px';
+    }
 
     // Scroll to the quiz section
     quizSection.scrollIntoView({
         behavior: 'smooth',
-        block: 'start'
+        block: 'center'
     });
 
     // Load the first quiz question
@@ -312,6 +316,14 @@ function resetQuiz() {
         // Clear question and Image
         questionElement.innerHTML = '';
     }
+
+    const isSmallScreen = window.matchMedia('(max-width:600px)');
+    if (isSmallScreen.matches) {
+        quizSection.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    }
 }
 
 /**
@@ -341,6 +353,13 @@ function selectAnswer(e) {
     // If there are more questions show the next question button
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextQuestionBtn.classList.remove('hide');
+        const isSmallScreen = window.matchMedia('(max-width:600px)');
+        if (isSmallScreen.matches) {
+            nextQuestionBtn.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }
     } else {
         // Otherwise show the user's score
         showScore();
@@ -407,6 +426,11 @@ function showScore() {
     scoreMessage.classList.add('quiz-score');
     // Add id to the score message
     scoreMessage.id = 'score-message-id';
+
+    quizContainer.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
 
     // Determine the message based on the score
     let message;
