@@ -355,6 +355,8 @@ function selectAnswer(e) {
     // For each button in the answer buttons container set the correct or wrong class on the button
     Array.from(answerBtns.children).forEach(button => {
         setCorrectOrWrongClass(button, button.dataset.correct === 'true');
+        // Disable the answer button after user made choice
+        button.disabled = true;
     });
 
     // Mark the chosen incorrect answer (so it looks a bit different than other incorrect answers)
