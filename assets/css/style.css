@@ -266,12 +266,9 @@ section {
     border-color: red;
 }
 
-.start-btn,
-.next-btn {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 10px 20px;
-    background-color: #e0e0e0;
+.finish-quiz {
+    float: left;
+    margin-left: 15px;
 }
 
 #question-container {

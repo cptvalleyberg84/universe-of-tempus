@@ -28,6 +28,8 @@ The restart button story.
 
 The responsive quiz section story.
 
+the green dot on hover for some reason stays green until you will choose the next dot, but only on small screens, not the big screens? when I change in the inspector to emulation of mobiles - regarding of the size it stays green - but when I click the PC emulation it disappears -  it also works like this on a few phones. 
+
 # Deployment
 
 

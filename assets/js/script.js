@@ -125,66 +125,66 @@ const quizQuestions = [{
         correctAnswer: 0,
         image: "assets/images/edwards-dilemmatic-character.png"
     },
-    {
-        question: "What does TAIA stand for?",
-        options: ["Technical Automated Interactive Agent", "Train Analitycal Information Assocciation ", "Tech Advanced Intelligent Animal", "TEMPUS Artificial Intelligence Assistant"],
-        correctAnswer: 3,
-        image: "assets/images/taia.jpg"
-    },
-    {
-        question: "Is TEMPUS a:",
-        options: ["Type of Space Shuttle", "Planet", "Weapon", "Time-traveling device"],
-        correctAnswer: 0,
-        image: "assets/images/scientists-building-tempus.jpg"
-    },
-    {
-        question: "The T-Suit is an extremly versatilve device. What is it primarily used for?",
-        options: ["Underwater diving", "Mountain Climbing", "Space Exploration", "Virtual Reality gaming"],
-        correctAnswer: 2,
-        image: "assets/images/first-dream1.png"
-    },
-    {
-        question: "What planet is the 'Red Destination'?",
-        options: ["Venus", "Mars", "Saturn", "Jupiter"],
-        correctAnswer: 1,
-        image: "assets/images/cylinder.jpg"
-    },
-    {
-        question: "What condition does Edward experience, causing him to see double?",
-        options: ["Astigmatism", "Myopia", "Hyperopia", "Diplopia"],
-        correctAnswer: 3,
-        image: "assets/images/scatterbrained-artist-scientist3.png"
-    },
-    {
-        question: "What technology does the TEMPUS Engine use?",
-        options: ["Solar Power", "Nuclear Fusion", "Gravity Speed", "Rocket Fule"],
-        correctAnswer: 2,
-        image: "assets/images/cylinder3.jpg"
-    },
-    {
-        question: "What is a 'cat' in the High School?",
-        options: ["A teacher", "A bully", "A rookie student", "A pet"],
-        correctAnswer: 2,
-        image: "assets/images/scatterbrained-artist-scientist2.png"
-    },
-    {
-        question: "What kind of rituals are associated with the history of the Holy Cross Mountains?",
-        options: ["Religious Ceremonies", "Pagan Rituals", "Scientific experiments", "Military drills"],
-        correctAnswer: 1,
-        image: "assets/images/pagans-loved-to-live-freely.png"
-    },
-    {
-        question: "What has unique ability to boost Edward's confidence?",
-        options: ["Wearing the T-Suit", "Finding a treasure", "Meeting an old friend", "Winning a battle"],
-        correctAnswer: 0,
-        image: "assets/images/scatterbrained-artist-scientist4.jpg"
-    },
-    {
-        question: "What is a blessing of guessing?",
-        options: ["A cooking recipe", "A title of a book", "TAIA's password", "'An ability of my inner duality'"],
-        correctAnswer: 3,
-        image: "assets/images/cylinder2.jpg"
-    },
+    // {
+    //     question: "What does TAIA stand for?",
+    //     options: ["Technical Automated Interactive Agent", "Train Analitycal Information Assocciation ", "Tech Advanced Intelligent Animal", "TEMPUS Artificial Intelligence Assistant"],
+    //     correctAnswer: 3,
+    //     image: "assets/images/taia.jpg"
+    // },
+    // {
+    //     question: "Is TEMPUS a:",
+    //     options: ["Type of Space Shuttle", "Planet", "Weapon", "Time-traveling device"],
+    //     correctAnswer: 0,
+    //     image: "assets/images/scientists-building-tempus.jpg"
+    // },
+    // {
+    //     question: "The T-Suit is an extremly versatilve device. What is it primarily used for?",
+    //     options: ["Underwater diving", "Mountain Climbing", "Space Exploration", "Virtual Reality gaming"],
+    //     correctAnswer: 2,
+    //     image: "assets/images/first-dream1.png"
+    // },
+    // {
+    //     question: "What planet is the 'Red Destination'?",
+    //     options: ["Venus", "Mars", "Saturn", "Jupiter"],
+    //     correctAnswer: 1,
+    //     image: "assets/images/cylinder.jpg"
+    // },
+    // {
+    //     question: "What condition does Edward experience, causing him to see double?",
+    //     options: ["Astigmatism", "Myopia", "Hyperopia", "Diplopia"],
+    //     correctAnswer: 3,
+    //     image: "assets/images/scatterbrained-artist-scientist3.png"
+    // },
+    // {
+    //     question: "What technology does the TEMPUS Engine use?",
+    //     options: ["Solar Power", "Nuclear Fusion", "Gravity Speed", "Rocket Fule"],
+    //     correctAnswer: 2,
+    //     image: "assets/images/cylinder3.jpg"
+    // },
+    // {
+    //     question: "What is a 'cat' in the High School?",
+    //     options: ["A teacher", "A bully", "A rookie student", "A pet"],
+    //     correctAnswer: 2,
+    //     image: "assets/images/scatterbrained-artist-scientist2.png"
+    // },
+    // {
+    //     question: "What kind of rituals are associated with the history of the Holy Cross Mountains?",
+    //     options: ["Religious Ceremonies", "Pagan Rituals", "Scientific experiments", "Military drills"],
+    //     correctAnswer: 1,
+    //     image: "assets/images/pagans-loved-to-live-freely.png"
+    // },
+    // {
+    //     question: "What has unique ability to boost Edward's confidence?",
+    //     options: ["Wearing the T-Suit", "Finding a treasure", "Meeting an old friend", "Winning a battle"],
+    //     correctAnswer: 0,
+    //     image: "assets/images/scatterbrained-artist-scientist4.jpg"
+    // },
+    // {
+    //     question: "What is a blessing of guessing?",
+    //     options: ["A cooking recipe", "A title of a book", "TAIA's password", "'An ability of my inner duality'"],
+    //     correctAnswer: 3,
+    //     image: "assets/images/cylinder2.jpg"
+    // },
 ];
 
 // Defining Quiz Variables
@@ -378,7 +378,11 @@ function selectAnswer(e) {
         }
     } else {
         // Otherwise show the user's score
-        showScore();
+        const finishQuiz = document.getElementById('finish-quiz');
+        finishQuiz.classList.remove('hide');
+        finishQuiz.classList.add('finish-quiz');
+        // finishQuiz.id = "next-question";
+        finishQuiz.addEventListener('click', finishQuizBtn);
     }
 }
 
@@ -416,9 +420,6 @@ function nextQuestion() {
         currentQuestionIndex++;
         // If there are more questions increment the current question index
         loadQuiz();
-    } else {
-        // Otherwise show the user's score
-        showScore();
     }
 }
 
@@ -477,6 +478,10 @@ function showScore() {
     restartQuiz();
 }
 
+function finishQuizBtn() {
+    showScore();
+}
+
 /**
  * Put the restart quiz button onto the Showscore board
  */
@@ -529,6 +534,8 @@ function removeScoreBoard() {
     if (scoreImage) {
         scoreImage.remove();
     }
+    const finishQuiz = document.querySelector('#finish-quiz');
+    finishQuiz.classList.add('hide');
 }
 
 // Instructions Button Dialog Setup
