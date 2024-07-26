@@ -94,7 +94,7 @@ function loadMap() {
             mapContainer.scrollIntoView({
                 behavior: "smooth",
                 block: 'start'
-            })
+            });
 
             // Add a marker to a clicked dot so it's different than not clicked ones
             floatingDot.classList.add('clicked-dot');
@@ -125,66 +125,66 @@ const quizQuestions = [{
         correctAnswer: 0,
         image: "assets/images/edwards-dilemmatic-character.png"
     },
-    // {
-    //     question: "What does TAIA stand for?",
-    //     options: ["Technical Automated Interactive Agent", "Train Analitycal Information Assocciation ", "Tech Advanced Intelligent Animal", "TEMPUS Artificial Intelligence Assistant"],
-    //     correctAnswer: 3,
-    //     image: "assets/images/taia.jpg"
-    // },
-    // {
-    //     question: "Is TEMPUS a:",
-    //     options: ["Type of Space Shuttle", "Planet", "Weapon", "Time-traveling device"],
-    //     correctAnswer: 0,
-    //     image: "assets/images/scientists-building-tempus.jpg"
-    // },
-    // {
-    //     question: "The T-Suit is an extremly versatilve device. What is it primarily used for?",
-    //     options: ["Underwater diving", "Mountain Climbing", "Space Exploration", "Virtual Reality gaming"],
-    //     correctAnswer: 2,
-    //     image: "assets/images/first-dream1.png"
-    // },
-    // {
-    //     question: "What planet is the 'Red Destination'?",
-    //     options: ["Venus", "Mars", "Saturn", "Jupiter"],
-    //     correctAnswer: 1,
-    //     image: "assets/images/cylinder.jpg"
-    // },
-    // {
-    //     question: "What condition does Edward experience, causing him to see double?",
-    //     options: ["Astigmatism", "Myopia", "Hyperopia", "Diplopia"],
-    //     correctAnswer: 3,
-    //     image: "assets/images/scatterbrained-artist-scientist3.png"
-    // },
-    // {
-    //     question: "What technology does the TEMPUS Engine use?",
-    //     options: ["Solar Power", "Nuclear Fusion", "Gravity Speed", "Rocket Fule"],
-    //     correctAnswer: 2,
-    //     image: "assets/images/cylinder3.jpg"
-    // },
-    // {
-    //     question: "What is a 'cat' in the High School?",
-    //     options: ["A teacher", "A bully", "A rookie student", "A pet"],
-    //     correctAnswer: 2,
-    //     image: "assets/images/scatterbrained-artist-scientist2.png"
-    // },
-    // {
-    //     question: "What kind of rituals are associated with the history of the Holy Cross Mountains?",
-    //     options: ["Religious Ceremonies", "Pagan Rituals", "Scientific experiments", "Military drills"],
-    //     correctAnswer: 1,
-    //     image: "assets/images/pagans-loved-to-live-freely.png"
-    // },
-    // {
-    //     question: "What has unique ability to boost Edward's confidence?",
-    //     options: ["Wearing the T-Suit", "Finding a treasure", "Meeting an old friend", "Winning a battle"],
-    //     correctAnswer: 0,
-    //     image: "assets/images/scatterbrained-artist-scientist4.jpg"
-    // },
-    // {
-    //     question: "What is a blessing of guessing?",
-    //     options: ["A cooking recipe", "A title of a book", "TAIA's password", "'An ability of my inner duality'"],
-    //     correctAnswer: 3,
-    //     image: "assets/images/cylinder2.jpg"
-    // },
+    {
+        question: "What does TAIA stand for?",
+        options: ["Technical Automated Interactive Agent", "Train Analitycal Information Assocciation ", "Tech Advanced Intelligent Animal", "TEMPUS Artificial Intelligence Assistant"],
+        correctAnswer: 3,
+        image: "assets/images/taia.jpg"
+    },
+    {
+        question: "Is TEMPUS a:",
+        options: ["Type of Space Shuttle", "Planet", "Weapon", "Time-traveling device"],
+        correctAnswer: 0,
+        image: "assets/images/scientists-building-tempus.jpg"
+    },
+    {
+        question: "The T-Suit is an extremly versatilve device. What is it primarily used for?",
+        options: ["Underwater diving", "Mountain Climbing", "Space Exploration", "Virtual Reality gaming"],
+        correctAnswer: 2,
+        image: "assets/images/first-dream1.png"
+    },
+    {
+        question: "What planet is the 'Red Destination'?",
+        options: ["Venus", "Mars", "Saturn", "Jupiter"],
+        correctAnswer: 1,
+        image: "assets/images/cylinder.jpg"
+    },
+    {
+        question: "What condition does Edward experience, causing him to see double?",
+        options: ["Astigmatism", "Myopia", "Hyperopia", "Diplopia"],
+        correctAnswer: 3,
+        image: "assets/images/scatterbrained-artist-scientist3.png"
+    },
+    {
+        question: "What technology does the TEMPUS Engine use?",
+        options: ["Solar Power", "Nuclear Fusion", "Gravity Speed", "Rocket Fule"],
+        correctAnswer: 2,
+        image: "assets/images/cylinder3.jpg"
+    },
+    {
+        question: "What is a 'cat' in the High School?",
+        options: ["A teacher", "A bully", "A rookie student", "A pet"],
+        correctAnswer: 2,
+        image: "assets/images/scatterbrained-artist-scientist2.png"
+    },
+    {
+        question: "What kind of rituals are associated with the history of the Holy Cross Mountains?",
+        options: ["Religious Ceremonies", "Pagan Rituals", "Scientific experiments", "Military drills"],
+        correctAnswer: 1,
+        image: "assets/images/pagans-loved-to-live-freely.png"
+    },
+    {
+        question: "What has unique ability to boost Edward's confidence?",
+        options: ["Wearing the T-Suit", "Finding a treasure", "Meeting an old friend", "Winning a battle"],
+        correctAnswer: 0,
+        image: "assets/images/scatterbrained-artist-scientist4.jpg"
+    },
+    {
+        question: "What is a blessing of guessing?",
+        options: ["A cooking recipe", "A title of a book", "TAIA's password", "'An ability of my inner duality'"],
+        correctAnswer: 3,
+        image: "assets/images/cylinder2.jpg"
+    },
 ];
 
 // Defining Quiz Variables
@@ -247,7 +247,6 @@ function startQuiz() {
     // Load the first quiz question
     loadQuiz();
 }
-
 
 /**
  * Function to make the quiz responsiveness working live and not only depending on what device the website is viewed
@@ -332,7 +331,7 @@ function resetQuiz() {
         // Clear question and Image
         questionElement.innerHTML = '';
     }
-
+    // Make sure the answer buttons and the question are fully visible when available (small screens)
     const isSmallScreen = window.matchMedia('(max-width:600px)');
     if (isSmallScreen.matches) {
         quizSection.scrollIntoView({
@@ -369,6 +368,7 @@ function selectAnswer(e) {
     // If there are more questions show the next question button
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextQuestionBtn.classList.remove('hide');
+        // Make sure the next question button is visible when is available (small screens)
         const isSmallScreen = window.matchMedia('(max-width:600px)');
         if (isSmallScreen.matches) {
             nextQuestionBtn.scrollIntoView({
@@ -377,11 +377,14 @@ function selectAnswer(e) {
             });
         }
     } else {
-        // Otherwise show the user's score
+        // Otherwise show the Finish Quiz button
+        // Get the finish quiz element
         const finishQuiz = document.getElementById('finish-quiz');
+        // Remove the class hide to show the button
         finishQuiz.classList.remove('hide');
+        // Add the finish quiz class to the button
         finishQuiz.classList.add('finish-quiz');
-        // finishQuiz.id = "next-question";
+        // Add an event listener to the button for the click event
         finishQuiz.addEventListener('click', finishQuizBtn);
     }
 }
@@ -437,7 +440,7 @@ function showScore() {
     // Count the number of correct answers
     let correctCount = userAnswers.filter(answer => answer).length;
 
-    // Add the book cover to the scoreboard
+    // Add the book cover image to the scoreboard
     const scoreImage = document.createElement('img');
     scoreImage.src = 'assets/images/theageofnewera-cover.jpg';
     quizContainer.appendChild(scoreImage);
@@ -449,7 +452,7 @@ function showScore() {
     scoreMessage.classList.add('quiz-score');
     // Add id to the score message
     scoreMessage.id = 'score-message-id';
-
+    // Make sure scoreboard is at the centre of the viewport
     quizContainer.scrollIntoView({
         behavior: "smooth",
         block: "center"
@@ -478,6 +481,9 @@ function showScore() {
     restartQuiz();
 }
 
+/**
+ * Function to show the scoreboard
+ */
 function finishQuizBtn() {
     showScore();
 }
