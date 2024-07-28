@@ -251,14 +251,14 @@ section {
     border-color: green;
     box-shadow: 0 0 10px 3px green;
     outline: 2px solid green;
-    transform: scale(102%, 111%);
+    transform: scale(1.02, 1.11);
 }
 
 .btn.wrong {
     background-color: rgb(240, 128, 128);
     border-color: rgb(168, 87, 87);
     box-shadow: 0 0 10px 1px red;
-    transform: scale(98%, 98%);
+    transform: scale(0.98, 0.98);
 }
 
 .btn.wrong.selected-wrong {

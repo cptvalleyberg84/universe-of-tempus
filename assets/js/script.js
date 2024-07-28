@@ -157,7 +157,7 @@ const quizQuestions = [{
     },
     {
         question: "What technology does the TEMPUS Engine use?",
-        options: ["Solar Power", "Nuclear Fusion", "Gravity Speed", "Rocket Fule"],
+        options: ["Solar Power", "Nuclear Fusion", "Gravity Speed", "Rocket Fuel"],
         correctAnswer: 2,
         image: "assets/images/cylinder3.jpg"
     },

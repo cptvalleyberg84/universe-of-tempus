@@ -1,21 +1,21 @@
 # Explore the Universe of TEMPUS
-![alt text](image.png)
+![alt text](/assets/documentation/image.png)
 
 Explore the universe of TEMPUS is a website where people can learn more about the novel THE AGE OF NEW ERA: Edward Teslenstein - TEMPUS - The Gravity Speed Engine. The visitors will be able to explore an interactive map where they can discover key characters, notions and locations of the novel, and then check their knowledge with the quiz. The lucky knowing-all contestant will have a chance to win an e-book or an audiobook code!
 
 The website can be accessed here [Explore the TEMPUS Universe](https://cptvalleyberg84.github.io/universe-of-tempus/)
 
-![alt text](image-1.png)
+![alt text](/assets/documentation/image-1.png)
 
 # Intro
 
 **Project Description**
 
-A website dedicated to discovering a science-fiction novel - THE AGE OF NEW ERA. Website will serve as a platform to learn more of what the novel is about. Of course it will merely mindly put on the track, but according to me - the less you know - the more you will enjoy - so just give it a shot and might be you will find interest in the whole story. Over the years of trying to market the novel - I found out that it is very difficult for me to talk about it, so I figured this proejct could be a perfect solution. From one hand it's an innovative approach to a book marketing, from the other hand - it's fun and games, and you can WIN a code for a free audiobook or e-book! Isn't that cool?
+A website dedicated to discovering a science-fiction novel - THE AGE OF NEW ERA. Website will serve as a platform to learn more of what the novel is about. Of course it will merely mindly put me on the track, but according to me - the less you know - the more you will enjoy - so just give it a shot and you might find interest in the whole story. Over the years of trying to market the novel - I found out that it is very difficult for me to talk about it, so I figured this project could be a perfect solution. On one hand it's an innovative approach to book marketing, on the other hand - it's fun and games, and you can WIN a code for a free audiobook or e-book! Isn't that cool?
 
 **Purpose**
 
-The main purpose of this website is to create an engaging website which will possible rise interest about the novel.
+The main purpose of this website is to create an engaging website which will possibly raise interest about the novel.
 
 **User Demographic**
 
@@ -30,82 +30,139 @@ The Target Audience:
 + **Header**
     + positioned at the top of the page
     + contains the title and the subtitle of the novel
+    
+    ![alt text](/assets/documentation/image-13.png)
 
 + **Content Sections**
     + The World of TEMPUS Section
-        + Introduction to the webspace
+    
+    ![alt text](/assets/documentation/image-14.png)
+
+    + Introduction to the webspace
         + Short Instruction
         + Instructions Button
-            + After clicking the button dialog box appears with more detailed instructions about the website and a button to "Begin the Adventure!" which will close the dialog box.
+            + After clicking the button dialog box appears with more detailed instructions about the website and a button to "Begin the Adventure!" which will close the dialog box. When this dialog is displayed - it will make the rest of the website a bit darker.
+    
+      ![alt text](/assets/documentation/image-15.png) 
+
     + Explore the Interactive Map Section
-        + This section contains an image-map with 9 floating points on specific locations of the map.
+    
+    ![alt text](/assets/documentation/image-16.png)
+
+    + This section contains an image-map with 9 floating points on specific locations of the map.
         + User clicks on chosen floating point:
             + hovering over the floating point will change the dot to light green color
-            + clicking on the dot will change the color of the dot to red, and will display information with the book quote about the chosen location and will automatically scroll to the description box - when necessary.
-        + User clicking on any other place on the map - and not the floating dots will close the descritpion window and show: "click on a location to learn more" box under the map.
+        
+    ![alt text](/assets/documentation/image-17.png)
+
+    + clicking on the dot will change the color of the dot to red, and will display information with the book quote about the chosen location and will automatically scroll to the description box - when necessary.
+        
+    ![alt text](/assets/documentation/image-18.png)
+    
+    + User clicking on any other place on the map - and not the floating dots will close the description window and show: "click on a location to learn more" box under the map.
+    
+    ![alt text](/assets/documentation/image-19.png)
+
     + The Quiz Box
-        + Contains text inviting for the Quiz
+    
+    ![alt text](/assets/documentation/image-20.png)
+
+    + Contains text inviting for the Quiz
         + Contains the START QUIZ Button
             + After pressing the button Quiz Starts and the first question appears
                 + the quiz box is now filled with new elements, starting at the top:
                     + question of the quiz
                     + Sci-fi vibe image related to the novel to some point
                     + 4 answers to choose from
-                    + and a question number of number of all questions - which is 12 = to easy find yourself how far in the quiz are you right now.
-                    + The answer buttons while hovering with mouse will change to poiter mouse, the border will turn green, and the background color of -on-hovered answer will become a bit darker so the user will see feedback from the webpage that it's ready to be clicked.
-                    + after user will made his choice - then it's time to click and not the fun begins:
-                        + if the user chose the correct answer - the asnwer will slightly become larger, and filler with green color to mark that it's the correct answer, all the other answers will turn red and become slightly smaller.
-                        + but if the user will chose the wrong answer - all answers will light up, but the wrong answer that the user chose will display an additional red outline - so the user can distinct and have it marked where did he click, also the correct answer will be shown with the green background - and slightly enlarged, comparing to now a bit smaller wrong answers.
-                        + The button NEXT QUESTION will appear.
-                    + After clicking the NEXT QUESTION button, the quiz box will reset, displaying the next, completely random chose question,
-                        + the answers will be of standard background
-                        + the question number in the right down corned will update the question number
-                        + the NEXT QUESTION will dissappear until the user will chose his next asnwer, where the loop will continue until the last question of the quiz.
-                    + The LAST QUESTION - 12 of 12
-                        + the last question is not much different of all the other questions with one exception
-                            + after the user will make his choice there be a new button appearing instead of the NEXT QUESTION BUTTON.
-                            + The button FINISH THE QUIZ will appear.
-                             + After clicking on the FINISH THE QUIZ Button - the SCORE BOARD will appear.
-                    + The SCORE BOARD
-                        + The cover of the book will display
-                        + The message QUIZ COMPLETE will show, showing the number of questions the user got Correct
-                        + additional customized message which will depend on the amount of questions the user got Correct:
-                            + There will be 4 different messages:
-                                + below 4 questions right a different message
-                                + 4 or above questions right a different message
-                                + 8 or above questions right a different message
-                                + 12 questions right a different message and a chance to win a free audiobook and e-book
-                        + a RESTART button will appear - so the user can choose to go through the quiz once more.
-                            + clicking the RESTART button will restart the quiz and show the 1st, randomly chose question.
-                            + the fun can start again.
+                    
+    ![alt text](/assets/documentation/image-21.png)
+
+    + and a question number of number of all questions - which is 12 = to easy find yourself how far in the quiz are you right now.
+        + The answer buttons while hovering with mouse will change mouse to pointer, the border will turn green, and the background color of -on-hovered answer will become a bit darker so the user will see feedback from the webpage that it's ready to be clicked.
+                    
+    ![alt text](/assets/documentation/image-22.png)
+
+    + after user will made his choice - then it's time to click and the fun begins:
+        + if the user will choose the correct answer - the answer will slightly become larger, and filler with green color to mark that it's the correct answer, all the other answers will turn red and become slightly smaller.
+
+        ![alt text](/assets/documentation/image-23.png)
+
+        + but if the user will choose the wrong answer - all answers will light up, but the wrong answer that the user chose will display an additional red outline - so the user can distinct and have it marked where did he click, also the correct answer will be shown with the green background - and slightly enlarged, comparing to now a bit smaller wrong answers.
+
+        ![alt text](/assets/documentation/image-24.png)
+
+        + The button NEXT QUESTION will appear.
+        
+        ![alt text](/assets/documentation/image-25.png)
+        
+        + After clicking the NEXT QUESTION button, the quiz box will reset, displaying the next, completely randomly chosen question,
+            + the answers will be of standard background
+            + the question number in the right down corned will update the question number
+            + the NEXT QUESTION will disappear until the user will choose his next answer, where the loop will continue until the last question of the quiz.
+
+            ![alt text](/assets/documentation/image-26.png)
+
+        + The LAST QUESTION - 12 of 12
+            
+            ![alt text](/assets/documentation/image-27.png)
+            
+            + the last question is not much different of all the other questions with one exception
+                + after the user will make his choice there will be a new button appearing instead of the NEXT QUESTION BUTTON.
+                + The button FINISH THE QUIZ will appear.
+                
+                ![alt text](/assets/documentation/image-28.png)
+                
+                + After clicking on the FINISH THE QUIZ Button - the SCORE BOARD will appear.
+        
+        + The SCORE BOARD
+            + The cover of the book will display
+            + The message QUIZ COMPLETE will show, showing the number of questions the user got Correct
+            + additional customized message which will depend on the amount of questions the user got Correct:
+                ![alt text](/assets/documentation/image-29.png)
+                + There will be 4 different messages:
+                    + below 4 questions right a different message
+                    + 4 or above questions right a different message
+                    + 8 or above questions right a different message
+                    + 12 questions right a different message and a chance to win a free audiobook and e-book
+            + a RESTART button will appear - so the user can choose to go through the quiz once more.
+                + clicking the RESTART button will restart the quiz and show the 1st, randomly chosen question.
+                + the fun can start again.
 + **The Footer**
     + Footer displays 3 icons to social media related to the novel, that needs to be used to contact the author if You got the pass after getting all the 12 questions of the quiz right, and you are ready to receive your novel, the footer icons also highlight on hover.
         + the facebook icon and link
         + the youtube icon and link 
         + and the instagram icon and link
-    + the small copyright 2024 Edward Teslenstain text
+
+        ![alt text](/assets/documentation/image-11.png)
+
+        ![alt text](/assets/documentation/image-12.png)
+
+    + the small copyright 2024 Edward Teslenstain text hiding-like, under the Footer
+
+    ![alt text](/assets/documentation/image-10.png)
 
 + **Miscellaneous**
 
     + Additionally, all anchor links are Accessible Rich Internet Applications (ARIA) with aria-labels to enhance accessibility, especially important as my novel is also available in audiobook format.
 
 ## Features Left to Implement
-At the beginning I thought it would be fun to have also the progress reader function, but it felt over scoped and I think to implement it in the later stages of publishing this website.
+At the beginning I thought it would be fun to also have the progress reader function, but it felt over-scoped and I think I should implement it in the later stages of publishing this website.
 I also thought it would be good to connect it with more information about where users can get the novel, but also - it is just a fun game page, so that's not the place for it - but maybe later.
+Make the green dot hover - to stay green until the user will click the next dot. (on mobile it works, on desktop not.)
 
 # Technologies Used
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) used as the foundation of the site.
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/css) used to add the styles and layout of the site.
-- [CSS Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) used to arrange items simmetrically on the pages.
+- [CSS Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) used to arrange items symmetrically on the pages.
 - [Balsamiq](https://balsamiq.com/) used to make wireframe prototypes for the website.
 - [GitHub](https://github.com/) used to host the code of the website and deploy the website.
 - [GitPod](https://www.gitpod.io/) used to write the code.
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [tinify](https://tinypng.com/)
-- [Adobe Photoshop](https://www.adobe.com/products/photoshop.html)
-- [Bing Image Creator](https://www.bing.com/images/create#)
-- [PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) used as foundation of interactive sections
+- [tinify](https://tinypng.com/) used for resizing the images on the website
+- [Adobe Photoshop](https://www.adobe.com/products/photoshop.html) used for editing bing created images
+- [Bing Image Creator](https://www.bing.com/images/create#) used for creating the images for map and quiz
+- [PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) used to create and edit the picture with the Stanczyk in Space representing the main character of the novel
 
 # Design
 
@@ -113,14 +170,14 @@ I also thought it would be good to connect it with more information about where 
 + I used very subtle coloring making it easy to identify the parts of the website.
     + The Header and the Footer of the site is in the same dark color with light colored text and icons
     + for the background I have used the logo from the book cover with edited out author name and the title of the book, which together builds a great background texture.
-    + the sections have lightly transparent white background with nice framing around the sections.
+    + the sections have slightly transparent white background with nice framing around the sections.
 
 ## **Typography**
 + For the text font I used the same font as users will be able to find inside the novel paper book or e-book version to keep them familiarized with the style
     + Font is Libre Caslon Text, Serif
 
 ## **Design Inspiration**
-+ The design of the site meets needs of the functionality of the website. It's suppose to be easy to understand what there is on the website, easy to find and be clear for visibility. The website has a header and a footer, and the main section is build of 2 corespondent interactive javascript elements.
++ The design of the site meets the needs of the functionality of the website. It's supposed to be easy to understand what is on the website, easy to find and clear for visibility. The website has a header and a footer, and the main section is built of 2 correspondent interactive javascript elements.
 
 # Manual Testing
 
@@ -134,7 +191,7 @@ I also thought it would be good to connect it with more information about where 
     - website was sent to members of family and friends and tested in different browsers, phones and computers.
 
 + **Compatibility**
-    + To confirm funcitonality in different environments, the website was tested on:
+    + To confirm functionality in different environments, the website was tested on:
         - Desktop
             - Firefox 
             - Ms Edge Browser
@@ -148,67 +205,60 @@ I also thought it would be good to connect it with more information about where 
     + No issues reported with the deployed website during the testing.
 
 + Sample compatibility pictures:
-    - [Edge]()
-    - [Opera]()
-    - [Firefox]()
+    - [Edge](/assets/documentation/image-7.png)
+    - [Opera](/assets/documentation/image-8.png)
+    - [Firefox](/assets/documentation/image-9.png)
 
-+ The website responsiveness was also checked with [Am I Responsive?]().
++ The website responsiveness was also checked with [Am I Responsive?](https://ui.dev/amiresponsive).
 
     Below, a sample gif showcasing responsiveness of 4 different screens and website features.
-    ![Am I Responsive?]()
+    
+    ![Am I Responsive?](/assets/documentation/am-i-responsive.gif)
 
 + **Validator Testing**
 
     - No errors were returned when passing through the official [W3C HTML Validator](https://validator.w3.org/) 
 
-    ![HTML Validation screenshot]()
+    [HTML Validation screenshot](/assets/documentation/image-6.png)
 
     - No errors were returned when passing through the official [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) 
 
-    ![CSS Validation screenshot]()
+    [CSS Validation screenshot](/assets/documentation/image-5.png)
 
 + **JSHINT**
 
     - No errors were returned when passing through the official []()
 
-    ![JSHINT Validation screenshot]()
+    ![JSHINT Validation screenshot](/assets/documentation/image-4.png)
 
 + **Google Pagespeed Insights report**
 
-    - according to Google Pagespeed Insights report the index page could performing better and is perfectly accessible and readable with great SEO.
-    - performance of Index and Works pages are affected by using High Quality Images.
+    - According to Google PageSpeed Insights report on the index page is of excellent performance and is perfectly accessible and readable with great SEO.
 
-        - Index/Home Page Insights:
+        - Home Page Insights:
 
-            - [Pagespeed Insights Home Page Mobile]()
+            - [PageSpeed Insights Home Page Desktop](/assets/documentation/image-2.png)
 
-            - [Pagespeed Insights Home Page Desktop]()
-
-        - Sign-up Page Insights:
-
-            - [Pagespeed Insights Sign-up Page Mobile]()
-
-            - [Pagespeed Insights Sign-Up Page Desktop]()
+            - [PageSpeed Insights Home Page Mobile](/assets/documentation/image-3.png)
 
 + **Bugs**
-    + No significant bugs have been identified. Minor adjsutments were made to improve performance and user experience. 
+    + No significant bugs have been identified. Minor adjustments were made to improve performance and user experience. 
 
-I had mutliple issues: (not mentioning how complex and big the Javascript seems to be. Amazing possibilities for building creations - which I still have to discover)
+## Issues:
 
-### In the map section: 
-Floating points where all over the place for most part of project building. not responsive - the issue laid with overflow, width control, and relative position in the container of the dots.
+### Map Section: 
+Floating points were all over the place for most part of project building. The Map was not responsive due to overflow, width control, and relative positioning issues within the container of the dots.
 
-### In the quiz section: 
-Multiple issues with logic, and how it is all done. It's more than one can figure out straight from the box. Putting everything together has been quite difficult, and even thou near the end, I had some issues with buttons being hidden while should not, or not working while they should. It is worth to note that issue sometimes exist outside of javascript and merely one display:none in CSS, may bring lots of confusion. Its important to logically understand that display:none can be assigned also to various id's or classes, and it's worth to remember which ones. - otherwise - if a button does not work - it is good to go through the code, again and again until understanding will come. in this case - going from the top and following each variable, checking everywhere it exists for the slightest error may bring a lot of happiness.
-But when you do, and it's not midnight - it can even bring a smile - that this day, was not all for errors, but also for solutions. (18-07-2024)
+The green dot on hover for some reason stays green until you will choose the next dot, but only on small screens, not the big screens. When I change the inspector to emulation of mobiles - regarding the size it stays green - but when I click the PC emulation it disappears -  it also works like this on a few phones - it remains a mystery why it happens this way. I liked that the green dot stayed on the screen until the next click on location happens. Hence I rather play on the phone now. I put this in features to implement later.
 
-new issue arising: if I need to have the quiz questions always on the same height? - if so - I couldn't yet figure out how to do so. I tried placing a placholder image, and different JS for replacing it, but so far it was always the same result - answers moving up or down, between the questions.
+### Quiz Section: 
+Multiple issues with logic and button visibility problems. Complex JavaScript made it difficult to understand how to put everything together. Buttons were hidden when they should not be, or were non-functional due to CSS issues. I systematically debugged the code by checking each variable and logic flow. I tried to ensure that all necessary elements were visible and functional by addressing sometimes i.e., too many times just the display:none setting I've put into code. The solution involved reviewing the code from top to bottom and following each variable's usage to identify the errors.
 
-The restart button story.
+I also had problems with consistent quiz question height. The problem was that the height for each question was resetting and the screen seemed to jump up and down when it was happening. To deal with this I attempted to use a placeholder image and various JS solutions to maintain consistent height mainly by controlling the display with scroll to the view option. It took a while to understand what works best for applying to scroll to what. It was what it was.
 
-The responsive quiz section story. - building responsive design, especially with the menu met with few difficulties, but all where solved after finding the "all: unset;" property and building it again from scratch.
+The restart button story. The restart button functionality initially was set to reload on location. But it seemed a good exercise to try and make it work without reloading the page. It was possibly the most difficult thing I had to do. I tried many different solutions and nothing worked. The button was not appearing, or clicking didn't do anything and was throwing errors in the console. For debugging I went to the tutors, and they somehow taught me how to deal with such things. The issue was one line that was emptying the whole HTML code about the quiz. When I was pointed to this, I finally, but slowly figured out what to do. First I tried to recreate the HTML but it only created more complications. Finally I understood that I needed to add a button and hide it, and then it was necessary for each instance of the quiz to remove it at a certain point. I am pretty happy I managed to solve it and am very thankful to tutors that didn't just tell me what to do. Thanks! (also included in the special thanks section).
 
-the green dot on hover for some reason stays green until you will choose the next dot, but only on small screens, not the big screens? when I change in the inspector to emulation of mobiles - regarding of the size it stays green - but when I click the PC emulation it disappears -  it also works like this on a few phones. 
+The responsive quiz section story. Building responsive design, especially with the menu met with few difficulties, but all were solved after applying a media query in the Javascript. At the beginning I was using the wrong approach, and the code was not live in changes, only when it started it was starting in a good way, while stretching the window didn't seem to have any function. Finally I found out how to build a responsive function which handled it pretty well, but then the issue was which lines to put where to make it work properly. In the end it was best to make it a part of the Start Quiz function.
 
 # Deployment
 
@@ -305,8 +355,8 @@ The live link can be found here - [Explore the Universe of TEMPUS](https://cptva
 
 Thank you to the Code Institute Javascript Essentials course - it was greatly full of theory. Practice comes hard! Javascript is not easy to begin with.
 
-Would love to say thank you to the CI Tutor team for the help with confusion about the RESTART Button, their guidance finally led me to solution after I struggled for about 2 days.
+Would love to say thank you to the CI Tutor team for the help with confusion about the RESTART Button, their guidance finally led me to a solution after I struggled for about 2 days.
 
-Big **THANK YOU** to my amazing Mentor Juliia_Konn for guidence and additional tips and tricks!
+Big **THANK YOU** to my amazing Mentor Juliia_Konn for guidance and additional tips and tricks!
 
 ###### End of Project
