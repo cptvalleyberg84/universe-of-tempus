@@ -127,7 +127,7 @@ const quizQuestions = [{
     },
     {
         question: "What does TAIA stand for?",
-        options: ["Technical Automated Interactive Agent", "Train Analitycal Information Assocciation ", "Tech Advanced Intelligent Animal", "TEMPUS Artificial Intelligence Assistant"],
+        options: ["Technical Automated Interactive Agent", "Train Analytical Information Association", "Tech Advanced Intelligent Animal", "TEMPUS Artificial Intelligence Assistant"],
         correctAnswer: 3,
         image: "assets/images/taia.jpg"
     },
@@ -138,7 +138,7 @@ const quizQuestions = [{
         image: "assets/images/scientists-building-tempus.jpg"
     },
     {
-        question: "The T-Suit is an extremly versatilve device. What is it primarily used for?",
+        question: "The T-Suit is an extremely versatile device. What is it primarily used for?",
         options: ["Underwater diving", "Mountain Climbing", "Space Exploration", "Virtual Reality gaming"],
         correctAnswer: 2,
         image: "assets/images/first-dream1.png"
