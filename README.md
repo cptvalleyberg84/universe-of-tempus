@@ -27,6 +27,9 @@ The Target Audience:
 
 # Features
 
++ **Favaicon**
+    + Website has its own custom favaicon.
+
 + **Header**
     + positioned at the top of the page
     + contains the title and the subtitle of the novel
@@ -181,14 +184,42 @@ Make the green dot hover - to stay green until the user will click the next dot.
 
 # Manual Testing
 
-+ **QA**
-    + Manual testing has been conducted to ensure the website functions as intended across different browsers and devices. Key aspects tested included:
-        - footer links
-        - interactive parts functionality
-        - responsiveness 
-        - and layout integrity
+| Feature |	Action	| Expected Result | tested | passed | comments |
+| --- | --- | --- | --- | --- | --- |
+Header||||||		
+Header| Position	|Positioned at the top of the page	Header stays fixed at the top of the page.| Yes | Yes | - |
+Header Content	|Contains the title and subtitle of the novel	|Title and subtitle are displayed correctly in the header.| Yes | Yes | - |
+The World of TEMPUS Section	||||||	
+Introduction|	Short instruction displayed	|Users see a brief introduction about the website.| Yes | Yes | - |
+Instructions Button	|Click on the instructions button|	A dialog box appears with detailed instructions and a "Begin the Adventure!" button. The rest of the website dims.| Yes | Yes | - |
+Interactive Map Section		||||||
+Image Map|	Contains an image-map with 9 floating points|	9 floating points are displayed at specific locations on the map.| Yes | Yes | - |
+Floating Point Hover|	User hovers over a floating point|	The dot changes to light green.| Yes | Yes | - |
+Floating Point Click|	User clicks on a floating point	|The dot changes to red, displaying a quote and scrolling to the description box if necessary.| Yes | Yes | - |
+Map Click Outside Dots	|User clicks anywhere else on the map|	The description window closes and a "click on a location to learn more" box appears under the map.| Yes | Yes | - |
+The Quiz Box||||||		
+Quiz Invitation	|Invitation text for the quiz	|Invitation text is displayed correctly.| Yes | Yes | - |
+Start Quiz Button	|Click on the START QUIZ button|	The quiz starts, showing the first question, an image, and 4 answers.| Yes | Yes | - |
+Answer Hover|	Hover over an answer button	|Mouse pointer changes, border turns green, background color darkens for visual feedback.| Yes | Yes | - |
+Correct Answer Chosen|	User selects the correct answer	|Correct answer enlarges and turns green, incorrect answers turn red and become smaller.| Yes | Yes | - |
+Wrong Answer Chosen|	User selects the wrong answer	|Wrong answer is outlined in red, correct answer is shown in green and enlarged, others turn smaller.| Yes | Yes | - |
+Next Question Button|	Click on the NEXT QUESTION button|	Resets the quiz box for the next question, updates the question number, hides the button until the next answer is chosen.| Yes | Yes | - |
+Last Question	|User answers the last question	|A FINISH THE QUIZ button appears instead of NEXT QUESTION.| Yes | Yes | - |
+Finish the Quiz Button	|Click on the FINISH THE QUIZ button	|Displays the SCORE BOARD with the user's results and a customized message based on the score.| Yes | Yes | - |
+Score Board|	View the score board|	Shows book cover, "QUIZ COMPLETE" message, the number of correct answers, a customized message, and a RESTART button.| Yes | Yes | - |
+Restart Button|	Click on the RESTART button	| Restarts the quiz from the first question.| Yes | Yes | - |
+Footer		||||||
+Social Media Icons|	Display 3 social media icons (Facebook, YouTube, Instagram)|	Icons and links are correctly displayed and highlight on hover.| Yes | Yes | - |
+Copyright Text|	View copyright text	|Copyright text "2024 Edward Teslenstain" is displayed under the footer.| Yes | Yes | - |
 
-    - website was sent to members of family and friends and tested in different browsers, phones and computers.
+## + **QA**
+
+   + Manual testing has been conducted to ensure the website functions as intended across different browsers and devices. Key aspects tested included:
+       - footer links
+       - interactive parts functionality
+       - responsiveness 
+       - and layout integrity
+       + website was sent to members of family and friends and tested in different browsers, phones and computers.
 
 + **Compatibility**
     + To confirm functionality in different environments, the website was tested on:
@@ -268,6 +299,16 @@ The responsive quiz section story. Building responsive design, especially with t
   - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
 The live link can be found here - [Explore the Universe of TEMPUS](https://cptvalleyberg84.github.io/universe-of-tempus/)
+
+### Local Deployment
+
+In order to make a local copy of this project, you can clone it.
+In your IDE Terminal, type the following command to clone my repository:
+
+- `git clone https://github.com/cptvalleyberg84/universe-of-tempus.git`
+
+- Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https://github.com/cptvalleyberg84/universe-of-tempus), which will start the Gitpod workspace for you.
+
 
 # Credits:
 
@@ -350,6 +391,7 @@ The live link can be found here - [Explore the Universe of TEMPUS](https://cptva
 
 18. [PageSpeed Insights](https://pagespeed.web.dev/)
 
+19. [Rafal Zygula's Literary Universe](https://cptvalleyberg84.github.io/zyg-author/index.html)
 
 # Special Thanks
 
